@@ -12,12 +12,12 @@
 -   GitHub: GitHub se utiliza para alojar el repositorio del proyecto, lo que facilita la colaboración y el seguimiento del progreso.
 -   Ramas: cada quien deberá traerse su rama desde github y trabajar sobre ella.
 
-## Fuentes e imágenes
+## Fuentes, imágenes y videos
 Cabin, sans-serif
-Para las imágenes revisar './public/assets/img'
-
+-  Para las imágenes revisar './public/assets/img'
+-  Para visualizar el video visitar https://drive.google.com/drive/folders/1C3qJVUvofqFxLW_9C4d4-_gwQI3UG6m4?usp=drive_link
 ## Autor
-Este proyecto es mantenido por Tu Nombre.
+Este proyecto es mantenido por Canter Software.
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
