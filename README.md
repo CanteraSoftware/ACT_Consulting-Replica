@@ -10,6 +10,7 @@
 -   JavaScript: JavaScript se emplea para añadir interactividad a la página, como funcionalidades de botones, formularios, animaciones, etc.
 -   Git: Se utiliza Git para llevar un registro de las modificaciones realizadas en el código del proyecto.
 -   GitHub: GitHub se utiliza para alojar el repositorio del proyecto, lo que facilita la colaboración y el seguimiento del progreso.
+-   Ramas: cada quien deberá traerse su rama desde github y trabajar sobre ella.
 
 ## Fuentes e imágenes
 Cabin, sans-serif
