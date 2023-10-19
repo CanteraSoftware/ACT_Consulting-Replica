@@ -16,8 +16,11 @@
 Cabin, sans-serif
 -  Para las imágenes revisar './public/assets/img'
 -  Para visualizar el video visitar https://drive.google.com/drive/folders/1C3qJVUvofqFxLW_9C4d4-_gwQI3UG6m4?usp=drive_link
+-  #f4f0ec - bg-beige
+-  #222220 - bg-contact_link
+-  #f8f8f8 - bg-gray
 ## Autor
-Este proyecto es mantenido por Canter Software.
+Este proyecto es mantenido por Cantera Software.
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
