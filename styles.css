@@ -1,1 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:Root {
+--bg-beige:#f4f0ec;
+--bg-contact_link: #222220; 
+--bg-gray: #f8f8f8;
+--hover-ligth-gray:#baab9e;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Cabin', sans-serif;
+  color: var(--bg-contact_link);
+}
+
+
+/* seccion what twe do */
+
+.what-we-do--section {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1000px;
+  font-size: 1.5rem;
+}
+.what-we-do--section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+.what-we-do--section .whit-parrafo{
+  margin-bottom: 55px;
+}
+
+.what-we-do--section div {
+  display: flex;
+}
+.what-we-do--section div ul{
+  width: 209px;
+  margin-left: 50px;
+  text-align: start;
+}
+.what-we-do--section div ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+}
+.what-we-do--section div ul li p {
+  margin-right: 15px;
+}
+
+
+  /* section de Info Contact */
+
+.Info-Contact--Container{
+  display: flex;
+  justify-content: center;
+  
+  font-size: 1.3rem;
+  text-align: center;
+  
+}
+.Info-Contact--Container section{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+.Info-Contact--Container section h1{
+  font-size: 2.3rem;
+  margin-bottom:  17px ;
+}
+.Info-Contact--Container section h2{
+  font-size: 1.5rem;
+  margin-bottom: 10px ;
+}
+
+.Info-Contact--Container section a{
+  color: var(--bg-contact_link);
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+.Info-Contact--Container section a:hover{
+  color: var(--hover-ligth-gray);
+}
+.Info-Contact--Container section p{
+  margin-bottom: 5px;
+}
