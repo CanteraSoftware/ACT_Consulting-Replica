@@ -1,1 +1,94 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Cabin", sans-serif;
+}
 
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 110px;
+  background-color: #f8f8f8;
+}
+.about {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50%;
+  max-width: 50%;
+}
+.cp {
+  background-image: url(./public/assets/img/post-4.jpg);
+  width: 450px;
+  height: 440px;
+  background-repeat: no-repeat;
+  background-size: 152%;
+  background-position: bottom;
+  border-radius: 15px;
+}
+.choose-us {
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+.cont-paragraph {
+  display: flex;
+  padding-right: 215px;
+}
+.our-best {
+  margin: 10px 0;
+  font-size: 2rem;
+}
+p {
+  font-size: 1.8rem;
+  margin-left: 20px;
+}
+.title1 {
+  font-size: 3.4rem;
+}
+.title {
+  font-size: 2.5rem;
+}
+.contacts-link {
+  background-color: #222220;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 210px;
+  gap: 20px;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+.title-link {
+  margin-top: 25px;
+  font-size: 3.4rem;
+  color: white;
+}
+.paragraph-link {
+  font-size: 1.4rem;
+  color: white;
+}
+.button-link {
+  border: 1px solid white;
+  background-color: #222220;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease-out;
+}
+.button-link:hover {
+  background-color: white;
+  color: #222220;
+}
