@@ -1,1 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+:root {
+  --bg-beige: #f4f0ec;
+  --bg-contact_link: #222220;
+  --bg-gray: #f8f8f8;
+  --FontFamily: 'Cabin', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--FontFamily);
+}
+
+.section-container-home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-imagen {
+  filter: brightness(0.5);
+  background-image: url("/public/assets/img/about-header.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 70vh;
+  border-bottom-left-radius: 50% 13%;
+  border-bottom-right-radius: 50% 13%;
+}
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+
+}
+
+.container-text h1 {
+  font-size: 2.9rem;
+  text-align: center;
+  color: var(--bg-beige);
+  margin-bottom: 15px;
+}
+
+.container-text p {
+  opacity: 60%;
+  color: var(--bg-gray);
+  font-size: 2rem;
+
+}
