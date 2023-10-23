@@ -18,6 +18,7 @@ html{
 /* Who we are container*/
 
 .Who-We-Are--Container{
+    padding: 100px 0;
     display: flex;
     justify-content: center;
 }
@@ -31,16 +32,14 @@ html{
 }
 .Who-We-Are--Description h1{
     text-align: start;
-    font-size: 2rem;
-    width: 26ch;
-    margin: 0 auto;
+    font-size: 2.2rem;
 }
 .Who-We-Are--Description p{
     text-align: start;
     width: 40ch;
     line-height: 20px;
     color: var( --bg-contact_link);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin: 10px auto 0 auto;
 }
 /* Details container and children */
@@ -52,13 +51,13 @@ margin-left: 20px;
 justify-content: left;
 }
 .Who-We-Are--Details h4{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     width: 46ch;
     font-weight: 500;
     color: var( --bg-contact_link);
 }
 .Who-We-Are--Details p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     width: 46ch;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -66,7 +65,7 @@ justify-content: left;
     color: var( --bg-contact_link);
 }
 .Who-We-Are--Details ul li{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     width: 50ch;
     margin-left: 30px;
     margin-top: 10px;
