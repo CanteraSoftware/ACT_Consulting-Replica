@@ -8,6 +8,7 @@
   --bg-contact_link: #222220;
   --bg-gray: #f8f8f8;
   --FontFamily: "Cabin", sans-serif;
+  --subtitle-Font-Size: 2.1rem;
 }
 html {
   font-size: 62.5%;
@@ -19,7 +20,7 @@ html {
   justify-content: center;
   align-items: center;
   margin-top: 110px;
-  background-color: #f8f8f8;
+  background-color: var(--bg-gray);
   padding: 70px 0 70px 0;
 }
 .about {
@@ -56,18 +57,20 @@ html {
   margin: 10px 0;
   font-size: 2rem;
 }
-p {
-  font-size: 1.8rem;
+.cont-paragraph p {
+  font-size: 1.6rem;
   margin-left: 20px;
 }
 .title1 {
-  font-size: 3.4rem;
+  font-size: 2.9rem;
+  letter-spacing: 1px;
 }
 .title {
-  font-size: 2.4rem;
+  font-size: var(--subtitle-Font-Size);
+  color: var(--bg-contact_link);
 }
 .contacts-link {
-  background-color: #222220;
+  background-color: var(--bg-contact_link);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +91,7 @@ p {
 }
 .button-link {
   border: 1px solid white;
-  background-color: #222220;
+  background-color: var(--bg-contact_link);
   color: white;
   width: 150px;
   height: 40px;
@@ -116,16 +119,15 @@ p {
 }
 .Who-We-Are--Description h1 {
   text-align: start;
-  font-size: 2rem;
-  width: 26ch;
-  margin: 0 auto;
+  color: var(--bg-contact_link);
+  font-size: 2.2rem;
 }
 .Who-We-Are--Description p {
   text-align: start;
   width: 40ch;
   line-height: 20px;
   color: var(--bg-contact_link);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin: 10px auto 0 auto;
 }
 /* Details container and children */
@@ -137,13 +139,13 @@ p {
   justify-content: left;
 }
 .Who-We-Are--Details h4 {
-  font-size: 1.4rem;
-  width: 46ch;
+  font-size: 1.6rem;
+  width: 45ch;
   font-weight: 500;
   color: var(--bg-contact_link);
 }
 .Who-We-Are--Details p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   width: 46ch;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -151,7 +153,7 @@ p {
   color: var(--bg-contact_link);
 }
 .Who-We-Are--Details ul li {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   width: 50ch;
   margin-left: 30px;
   margin-top: 10px;
@@ -188,12 +190,12 @@ p {
   margin-top: 30px;
 }
 .Personal-Attention--Container section h1 {
-  font-size: 2.4rem;
+  font-size: var(--subtitle-Font-Size);
   margin: 20px 0 20px 40px;
 }
 
 .Personal-Attention--Container section p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   width: 47ch;
   margin-left: 40px;
 }
