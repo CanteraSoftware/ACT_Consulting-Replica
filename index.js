@@ -1,3 +1,5 @@
+const body = document.querySelector("body");
+
 //animacion de what we do
 const whatWeDoSection = document.querySelector(".what-we-do--section");
 const titleWhatWeDo = document.querySelector(".titleWhat-we-do");
@@ -41,7 +43,12 @@ const inputTextName = document.querySelector(".input-text");
 const inputEmail = document.querySelector(".input-Email");
 const textareaMessage = document.querySelector("#textarea-message");
 const submitButton = document.querySelector(".button-SendMessage");
+const imgFormContactMensajes = document.querySelector(".img-form-contact--Mensajes-off");
+const imgformX = document.querySelector(".img-form");
+const imgFormContactMensajesOn = document.querySelector(".imgFormContactMensajesOn");
 
+imgformX.addEventListener("click", openMensajes);
+imgFormContactMensajesOn.addEventListener("click", openMensajes);
 textareaMessage.addEventListener("input",caracteresContente);
 inputTextName.addEventListener("input",nameValidator);
 inputEmail.addEventListener("input",emailValidator);
@@ -53,7 +60,7 @@ submitButton.addEventListener("click", submitForm,false)
 const inputTextError = document.createElement("div");
 inputTextError.style = `
 position: absolute;
-top: 1px;
+top: 30px;
 left: 130px;
 color: red;
 `
@@ -61,7 +68,7 @@ color: red;
 const inputTextEmail = document.createElement("div");
 inputTextEmail.style = `
 position: absolute;
-top: 1px;
+top: 30px;
 left: 480px;
 color: red;
 `
@@ -190,10 +197,66 @@ function submitForm(event) {
     emailValidator();
     nameValidator();
     caracteresContente();
+  }else{
+    event.preventDefault();
+    mensajesAgregados();
+    nuevoMensaje();
+    inputTextName.value = "";
+    textareaMessage.value = "";
+    inputEmail.value = "";
   }
 }
 
 
+const contenedorDeMensajesgENERAL = document.querySelector(".mensajesGenerales");
+function nuevoMensaje() {
+  if (contenedorDeMensajesgENERAL.length == 0) {
+    imgFormContactMensajesOn.classList.toggle("inactive");
+  }else if (imgFormContactMensajesOn.classList.contains("inactive")) {
+    imgFormContactMensajesOn.classList.remove("inactive");
+    imgFormContactMensajes.classList.add("inactive");
+  };
+}
+
+function openMensajes() {
+  contenedorDeMensajesgENERAL.classList.toggle("contenedor-De-Mensajes-gENERAL");
+  contenedorDeMensajesgENERAL.classList.toggle("contenedor-De-Mensajes-gENERAL-animation");
+  imgformX.classList.toggle("inactive");
+}
+
+
+
+
+
+
+
+function mensajesAgregados() {
+
+const contenedorDeMensajes = document.createElement("div");
+contenedorDeMensajes.style = `
+overflow-wrap: break-word;
+margin-bottom: 10px;
+;
+`
+const contenedorDeMensajesName = document.createElement("h1");
+
+const contenedorDeMensajesGmail = document.createElement("a");
+
+const contenedorDeMensajesMensaje = document.createElement("p");
+contenedorDeMensajesMensaje.style = `
+`
+
+contenedorDeMensajesName.innerText = `${inputTextName.value}`;
+
+contenedorDeMensajesMensaje.innerText = `${textareaMessage.value}`;
+
+contenedorDeMensajesMensaje.innerText = `${textareaMessage.value}`;
+contenedorDeMensajesGmail.innerText = `${inputEmail.value}`;
+
+FormContactContainer.appendChild(contenedorDeMensajesgENERAL);
+contenedorDeMensajesgENERAL.append(contenedorDeMensajes);
+contenedorDeMensajes.append(contenedorDeMensajesName,contenedorDeMensajesMensaje,contenedorDeMensajesGmail);
+}
 
 
 
