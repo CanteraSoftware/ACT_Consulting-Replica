@@ -3,6 +3,12 @@
   padding: 0;
   margin: 0;
 }
+:root {
+  --bg-beige: #f4f0ec;
+  --bg-contact_link: #222220;
+  --bg-gray: #f8f8f8;
+  --FontFamily: "Cabin", sans-serif;
+}
 html {
   font-size: 62.5%;
   font-family: "Cabin", sans-serif;
@@ -14,6 +20,7 @@ html {
   align-items: center;
   margin-top: 110px;
   background-color: #f8f8f8;
+  padding: 70px 0 70px 0;
 }
 .about {
   width: 50%;
@@ -57,7 +64,7 @@ p {
   font-size: 3.4rem;
 }
 .title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 .contacts-link {
   background-color: #222220;
@@ -91,4 +98,102 @@ p {
 .button-link:hover {
   background-color: white;
   color: #222220;
+}
+
+/* Who we are container*/
+
+.Who-We-Are--Container {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+/* Description container and children */
+
+.Who-We-Are--Description {
+  flex-direction: column;
+  display: flex;
+  justify-content: right;
+}
+.Who-We-Are--Description h1 {
+  text-align: start;
+  font-size: 2rem;
+  width: 26ch;
+  margin: 0 auto;
+}
+.Who-We-Are--Description p {
+  text-align: start;
+  width: 40ch;
+  line-height: 20px;
+  color: var(--bg-contact_link);
+  font-size: 1.3rem;
+  margin: 10px auto 0 auto;
+}
+/* Details container and children */
+
+.Who-We-Are--Details {
+  flex-direction: column;
+  display: flex;
+  margin-left: 20px;
+  justify-content: left;
+}
+.Who-We-Are--Details h4 {
+  font-size: 1.4rem;
+  width: 46ch;
+  font-weight: 500;
+  color: var(--bg-contact_link);
+}
+.Who-We-Are--Details p {
+  font-size: 1.2rem;
+  width: 46ch;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: var(--bg-contact_link);
+}
+.Who-We-Are--Details ul li {
+  font-size: 1.2rem;
+  width: 50ch;
+  margin-left: 30px;
+  margin-top: 10px;
+  color: var(--bg-contact_link);
+}
+.Who-We-Are--Details ul li::marker {
+  content: "+     ";
+  font-size: 1.8rem;
+  color: var(--bg-contact_link);
+}
+
+/* Personal Attention Container */
+
+.Personal-Attention--Container {
+  background-color: var(--bg-beige);
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: var(--bg-contact_link);
+}
+/* Personal Attention Img */
+.Personal-Attention--img {
+  display: flex;
+  background-image: url("/public/assets/img/about-corporate-1@2x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 610px;
+}
+
+/* Personal Attention Details */
+.Personal-Attention--Container section {
+  margin-top: 30px;
+}
+.Personal-Attention--Container section h1 {
+  font-size: 2.4rem;
+  margin: 20px 0 20px 40px;
+}
+
+.Personal-Attention--Container section p {
+  font-size: 1.6rem;
+  width: 47ch;
+  margin-left: 40px;
 }
