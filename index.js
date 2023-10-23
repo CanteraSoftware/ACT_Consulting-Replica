@@ -1,4 +1,38 @@
-const body = document.querySelector("body");
+
+//animacion de what we are
+const WhoWeAreContainer = document.querySelector(".Who-We-Are--Container");
+const WhoWeAreDescription = document.querySelector(".Who-We-Are--Description");
+const WhoWeAreDetails = document.querySelector(".Who-We-Are--Details");
+
+window.addEventListener("scroll", scrollanimacionWhoWeAre);
+
+function scrollanimacionWhoWeAre() {
+  if (elementIdentifier(WhoWeAreContainer)) { 
+    setTimeout( () => {
+      WhoWeAreDescription.classList.remove("LadderAnimation");
+    WhoWeAreDetails.classList.remove("LadderAnimation");
+    }, 400);
+  }
+  } 
+
+
+
+//animacion de link contac
+
+const contactsLinkes = document.querySelector(".Contact-Link-Home--Container");
+const contactsLink = document.querySelector(".contacts-link");
+
+window.addEventListener("scroll", scrollAnimationLinkConc)
+
+function scrollAnimationLinkConc() {
+  if (elementIdentifier(contactsLinkes)) {
+    setTimeout( () => {
+      contactsLink.classList.remove("opacityAnimation");
+    }, 500);
+    
+  }
+}
+
 
 //animacion de what we do
 const whatWeDoSection = document.querySelector(".what-we-do--section");
@@ -223,11 +257,6 @@ function openMensajes() {
   contenedorDeMensajesgENERAL.classList.toggle("contenedor-De-Mensajes-gENERAL-animation");
   imgformX.classList.toggle("inactive");
 }
-
-
-
-
-
 
 
 function mensajesAgregados() {
