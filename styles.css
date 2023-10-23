@@ -138,26 +138,25 @@ html {
   margin-left: 20px;
   justify-content: left;
 }
-.Who-We-Are--Details h4 {
-  font-size: 1.6rem;
-  width: 45ch;
-  font-weight: 500;
-  color: var(--bg-contact_link);
+.Who-We-Are--Details h4{
+    font-size: 1.6rem;
+    width: 45ch;
+    font-weight: 500;
+    color: var( --bg-contact_link);
 }
-.Who-We-Are--Details p {
-  font-size: 1.4rem;
-  width: 46ch;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-weight: 400;
-  color: var(--bg-contact_link);
+.Who-We-Are--Details p{
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: var( --bg-contact_link);
 }
-.Who-We-Are--Details ul li {
-  font-size: 1.3rem;
-  width: 50ch;
-  margin-left: 30px;
-  margin-top: 10px;
-  color: var(--bg-contact_link);
+.Who-We-Are--Details ul li{
+    font-size: 1.4rem;
+    width: 50ch;
+    margin-left: 30px;
+    margin-top: 10px;
+    color: var( --bg-contact_link);
 }
 .Who-We-Are--Details ul li::marker {
   content: "+     ";
@@ -194,8 +193,8 @@ html {
   margin: 20px 0 20px 40px;
 }
 
-.Personal-Attention--Container section p {
-  font-size: 1.5rem;
-  width: 47ch;
-  margin-left: 40px;
+.Personal-Attention--Container section p{
+    font-size: 1.5rem;
+    width: 47ch;
+    margin-left: 40px;
 }
