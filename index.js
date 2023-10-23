@@ -3,29 +3,33 @@ const whatWeDoSection = document.querySelector(".what-we-do--section");
 const titleWhatWeDo = document.querySelector(".titleWhat-we-do");
 const whitParrafo = document.querySelector(".whit-parrafo");
 const ulListChequed = document.querySelectorAll(".ul-list-chequed");
+const whatWeDoSectionContainerul = document.querySelector(".what-we-do--section-Container-ul");
 
 
-//adaptar a scroll
-//adaptar a scroll
+window.addEventListener("scroll",scrollAnimationwhatWeDo);
+window.addEventListener("scroll",scrollAnimationwhatWeDoPT);
 
-function titleParrafo() {
+
+function titleParrafoAnimation() {
   titleWhatWeDo.classList.remove("LadderAnimation");
   whitParrafo.classList.remove("LadderAnimation");
 }
 
-
-function ladderSections () {
-  let time = 500;
-  for (let i = 0; i < ulListChequed.length; i++) {
-    time =+ time + 100
-    const element = ulListChequed[i];
-    setTimeout( () => {
-      element.classList.remove("LadderAnimation");
-    }, time);
-    console.log(time);
-    console.log(element);
-  }
+function scrollAnimationwhatWeDoPT() {
+  if (elementIdentifier(whatWeDoSection)) { //que hace si esta en la pantalla
+    titleParrafoAnimation();
+  }/* else {//que hace si no esta en la pantalla
+    
+  } */
 }
+function scrollAnimationwhatWeDo() {
+  if (elementIdentifier(whatWeDoSectionContainerul)) { //que hace si esta en la pantalla
+    ladderSections(ulListChequed);
+  }/* else {//que hace si no esta en la pantalla
+    console.log("hola mundo");
+  } */
+}
+
 
 
 
@@ -43,6 +47,7 @@ inputTextName.addEventListener("input",nameValidator);
 inputEmail.addEventListener("input",emailValidator);
 
 submitButton.addEventListener("click", submitForm,false)
+
 
 /* Contenedores de textos de Error */
 const inputTextError = document.createElement("div");
@@ -166,38 +171,25 @@ function emailValidator() {
       `
     };
 
-  /* else{
-      inputTextEmail.innerText = ""
-      inputEmail.style = `
-    border:1px solid var(--hover-ligth-gray) ;
-    `
-    } */
-
-
     if (email.length >= 3) {
-      return false
-    }/* else if (firstEmail && secondEmail ) {
-      if (/[0-9-,._?}{:;`^*+´¨%#"!|°]/.test(firstEmail[0])) {
-        return console.log("Tus caracteres iniciales son inbalidos");
-      }else if (/[0-9-,._?}{:;`^*+´¨%#"!|°]/.test(secondEmail[1])) {
-        return "Tus caracteres despues del @ son invalidos"
-      } else{
-        return "tu email es valido"
-      }
-      
-    } */
+      inputTextEmail.innerText = "Invalid email"
+      inputEmail.style = `
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+    `
+    }
 }
 
 function submitForm(event) {
   let email = inputEmail.value
   let name = inputTextName.value
   let textarea = textareaMessage.value
-
+  
   if (!email || !name || !textarea) {
+    event.preventDefault();
     emailValidator();
     nameValidator();
     caracteresContente();
-    event.preventDefault();
   }
 }
 
@@ -209,21 +201,53 @@ function submitForm(event) {
 const InfoContactContainer = document.querySelector(".Info-Contact--Container");
 const sectionDesplace = document.querySelectorAll(".section-desplace");
 
+window.addEventListener("scroll",scrollAnimationInfoContainer);
 
-//adaptar a scroll
+function scrollAnimationInfoContainer() {
+  if (elementIdentifier(InfoContactContainer)) { //que hace si esta en la pantalla
+    ladderSections(sectionDesplace);
+  }else {//que hace si no esta en la pantalla
+    console.log("hola mundo");
+  }
+}
 
-function animacionEScalera() {
+
+
+//funciones generales de animacion
+
+function elementIdentifier(elemento) { //esta funcion entrega si esta o no en la pantalla.
+  
+  let longi = elemento.getBoundingClientRect(); 
+  
+  return (
+    longi.top < (window.innerHeight || document.documentElement.clientHeight) && longi.bottom > 0
+  )
+  
+};
+
+/* animacion de escalera */
+function ladderSections (contenedores) {
   let time = 500;
-  for (let i = 0; i < sectionDesplace.length; i++) {
+  for (let i = 0; i < contenedores.length; i++) {
     time =+ time + 100
-    const element = sectionDesplace[i];
+    const element = contenedores[i];
     setTimeout( () => {
       element.classList.remove("LadderAnimation");
     }, time);
-    console.log(time);
-    console.log(element);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
