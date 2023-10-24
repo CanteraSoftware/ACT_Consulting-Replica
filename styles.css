@@ -3,6 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --bg-beige:#f4f0ec;
+    --bg-contact_link: #222220; 
+    --bg-gray: #f8f8f8;
+    --FontFamily: 'Cabin', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    font-family: var(--FontFamily);
+}
 .buttons-navbar{
    display: flex;
    position: fixed;
@@ -13,11 +23,14 @@
    height: 80px;
    justify-content: end;
    
+   
 }
 .buttons-navbar.scrolled{
     background-position-y: 0%;
     transition: background-color 1.4s ease-in;
-
+}
+header nav{
+    height: 80px;
 }
 .bg-nav{
     width: 100%;
@@ -35,7 +48,7 @@
     opacity: .5;
     text-decoration: none;
     margin: 0 10px;
-    font-family: 'Cabin', sans-serif;
+    font-size: 1.4rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -52,11 +65,178 @@
 .buttons-navbar a.scrolled:hover{
     opacity: .7;
 }
-body{
-    padding-top: 80px;
-    background-color: white;
+/* Who we are container*/
+
+.Who-We-Are--Container{
+    display: flex;
+    justify-content: center;
+}
+/* Description container and children */
+
+.Who-We-Are--Description{
+   
+    flex-direction: column;
+    display: flex;
+    justify-content: right;
+}
+.Who-We-Are--Description h1{
+    text-align: start;
+    font-size: 2rem;
+    width: 26ch;
+    margin: 0 auto;
+}
+.Who-We-Are--Description p{
+    text-align: start;
+    width: 40ch;
+    line-height: 20px;
+    color: var( --bg-contact_link);
+    font-size: 1.3rem;
+    margin: 10px auto 0 auto;
+}
+/* Details container and children */
+
+.Who-We-Are--Details{
+flex-direction: column;
+display: flex;
+margin-left: 20px;
+justify-content: left;
+}
+.Who-We-Are--Details h4{
+    font-size: 1.4rem;
+    width: 46ch;
+    font-weight: 500;
+    color: var( --bg-contact_link);
+}
+.Who-We-Are--Details p{
+    font-size: 1.2rem;
+    width: 46ch;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: var( --bg-contact_link);
+}
+.Who-We-Are--Details ul li{
+    font-size: 1.2rem;
+    width: 50ch;
+    margin-left: 30px;
+    margin-top: 10px;
+    color: var( --bg-contact_link);
+}
+.Who-We-Are--Details ul li::marker{
+    content: "+     ";
+    font-size: 1.8rem;
+    color: var( --bg-contact_link);
+}
+
+
+/* Personal Attention Container */
+
+.Personal-Attention--Container{
+    background-color: var(--bg-beige);
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: var(--bg-contact_link);
+
+}
+/* Personal Attention Img */
+.Personal-Attention--img{
+    display: flex;
+    background-image: url("/public/assets/img/about-corporate-1@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 610px;
+}
+
+/* Personal Attention Details */
+.Personal-Attention--Container section{
+    margin-top: 30px;
+}
+.Personal-Attention--Container section h1{
+    font-size: 2.4rem;
+    margin: 20px 0 20px 40px
+}
+
+.Personal-Attention--Container section p{
+    font-size: 1.6rem;
+    width: 47ch;
+    margin-left: 40px;
+}
+footer{
+    position: relative;
+    display: flex;
+    margin-bottom: 60px;
+    flex-direction: row;
+    justify-content: center;
 }
 footer span img{
-    width: 30px;
-    height: 30px;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    left: 0;
+    cursor: pointer;
+}
+
+footer .Footer-Container-Text{
+    position: absolute;
+    font-size: 1.4rem;
+    left: 10px;
+    width: 380px;
+}
+footer .Footer-Container-Text h3{
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+footer .Footer-Container-Text p{
+    margin: 20px 0;
+}
+footer .Footer-Container-Sections{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.6rem;
+    width: 100px;   
+}
+footer .Footer-Container-Sections div{
+    margin: 20px 0;
+    font-size: 1.4rem;
+}
+footer .Footer-Container-Sections div p{
+    margin: 8px 0;
+    cursor: pointer;
+}
+footer .Footer-Container-Contacts{
+    position: absolute;
+    font-size: 1.6rem;
+    width: 150px;
+    right: 80px;
+}
+footer .Footer-Container-Contacts div{
+    font-size: 1.4rem;
+    margin: 20px 0;
+}
+.Footer-Line{
+    position: absolute;
+    bottom: -10px;
+    width: 90%;
+    height: 1px;
+    background-color: var(--bg-gray);
+}
+footer .Footer-Policy{
+    position: absolute;
+    bottom: -40px;
+    right : 50px;
+}
+footer section {
+    position: absolute;
+    bottom: -40px;
+    left: 57px;
+}
+footer a{
+    text-decoration: none;
+    margin: 20px 20px 60px 20px;
+    color: var(--bg-contact_link);
+    font-size: 1.3rem;
 }
