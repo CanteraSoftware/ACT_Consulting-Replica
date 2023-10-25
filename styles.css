@@ -11,13 +11,13 @@
   --bg-gray: #f8f8f8;
   --FontFamily: "Cabin", sans-serif;
   --hover-ligth-gray: #baab9e;
-  --subtitle-Font-Size: 2.1rem;
+  --subtitle-Font-Size: 3rem;
 }
 
 
 html {
   font-size: 62.5%;
-  font-family: 'Cabin', sans-serif;
+  font-family: var(--FontFamily);
   color: var(--bg-contact_link);
 }
 
@@ -59,7 +59,7 @@ header nav {
 
 .buttons-navbar a {
   color: white;
-  opacity: .5;
+  opacity: 1;
   text-decoration: none;
   margin: 0 10px;
   font-size: 1.4rem;
@@ -96,7 +96,7 @@ header nav {
 .Home-Header--container .Home-Header--imagen {
   filter: brightness(0.5);
   background-image: url("/public/assets/img/about-header.jpg");
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100vw;
@@ -115,7 +115,7 @@ header nav {
 
 /* section contenedor header home texto h1*/
 .Home-Header--container .Home-Header--text h1 {
-  font-size: 2.9rem;
+  font-size: 4.9rem;
   text-align: center;
   color: var(--bg-beige);
   margin-bottom: 15px;
@@ -590,8 +590,8 @@ header nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
-  width: 610px;
+  height: 470px;
+  width: 670px;
 }
 
 /* Personal Attention Details */
@@ -605,7 +605,7 @@ header nav {
 }
 
 .Personal-Attention--Container section p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   width: 47ch;
   margin-left: 40px;
 }

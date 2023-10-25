@@ -12,7 +12,6 @@ const icons = document.querySelectorAll(".open");
 const paragraphDescription = document.querySelectorAll(".Paragraph-Our-Services--description");
 
 
-
 //funcion para aparecer los parrafos de descripcion
 
 // function openDescription() {
@@ -41,12 +40,12 @@ function toggleDescription(index) {
     }
   });
 }
-
 icons.forEach(function (icon, index) {
   icon.addEventListener("click", function () {
     toggleDescription(index);
   });
 })
+
 const button = document.querySelectorAll('.buttons-navbar li a');
 const navbar = document.querySelector('.bg-nav');
 const contactNav = document.querySelector('#navBar--contacts')
@@ -393,6 +392,8 @@ function ladderSections(contenedores) {
     }, time);
   }
 }
+
+
 
 
 
