@@ -177,7 +177,6 @@ html{
 .Who-We-Are--Container {
   display: flex;
   justify-content: center;
-  padding-top: 100px;
   margin-bottom: 150px;
 }
 .Who-We-Are--Description p {

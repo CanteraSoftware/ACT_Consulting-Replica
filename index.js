@@ -1,3 +1,6 @@
+//scroll top
+
+
 
 //animacion de what we are
 const WhoWeAreContainer = document.querySelector(".Who-We-Are--Container");
@@ -328,6 +331,7 @@ function ladderSections (contenedores) {
     }, time);
   }
 }
+
 
 
 
