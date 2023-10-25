@@ -16,13 +16,15 @@ html {
   font-family: var(--FontFamily);
 }
 
-.section-container-home-header {
+/* section contenedor header home*/
+.Home-Header--container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.section-container-home-header .container-imagen {
+/* section contenedor header home imagen*/
+.Home-Header--container .Home-Header--imagen {
   filter: brightness(0.5);
   background-image: url("/public/assets/img/about-header.jpg");
   background-repeat: none;
@@ -30,11 +32,11 @@ html {
   background-size: cover;
   width: 100vw;
   height: 70vh;
-  border-bottom-left-radius: 50% 13%;
-  border-bottom-right-radius: 50% 13%;
+  clip-path: ellipse(105% 76% at 50% 21%);
 }
 
-.section-container-home-header .container-text {
+/* section contenedor  header home texto*/
+.Home-Header--container .Home-Header--text {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -42,17 +44,19 @@ html {
 
 }
 
-.container-text h1 {
-  font-size: 2.9rem;
+/* section contenedor header home texto h1*/
+.Home-Header--container .Home-Header--text h1 {
+  font-size: 4.9rem;
   text-align: center;
   color: var(--bg-beige);
   margin-bottom: 15px;
 }
 
-.container-text p {
+/* section contenedor header home texto p*/
+.Home-Header--container .Home-Header--text p {
   opacity: 60%;
   color: var(--bg-gray);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /* Who we are container*/
@@ -163,4 +167,70 @@ html {
   font-size: 1.6rem;
   width: 47ch;
   margin-left: 40px;
+}
+
+/* Our Services*/
+.Our-Services--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.Our-Services--container h1 {
+  font-size: var(--subtitle-Font-Size);
+}
+
+.Our-Services--title {
+  font-size: 1.5rem;
+}
+
+.Paragraph-Our-Services--container {
+  border: 1px solid #6c6a6a4d;
+  width: 530px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.Paragraph-Our-Services--other {
+  display: flex;
+  justify-content: space-between;
+  width: 530px;
+  margin-top: 10px;
+  align-items: center;
+  transition: all 0.5 ease;
+}
+
+.Our-Services section {
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+.open {
+  font-size: 3rem;
+  margin-right: 20px;
+  transition: all 0.5s ease;
+}
+
+.open:hover {
+  transform: rotate(90deg);
+}
+
+.Paragraph-Our-Services--title {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.inactive {
+  display: none;
+}
+
+.Paragraph-Our-Services--description {
+  align-self: flex-start;
+  font-size: 1.3rem;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
