@@ -1,15 +1,25 @@
-/* const open = document.querySelectorAll(".open");
-
-open.forEach((item) =>
-  item.addEventListener("mouseover", () => {
-    item.innerText = "-";
-  })
-); */
-
+/* click el button contact now */
+const buttonContactNow = document.querySelector(".button-link")
+/*click en el nav contact */
+const contactNav = document.querySelector('#navBar--contacts')
+const navBarHome = document.querySelector("#navBar--home")
+const aboutUs = document.querySelector(".about-us")
+const personalAttentionContainer = document.querySelector(".Personal-Attention--Container")
+const contactLinkHomeContainer = document.querySelector(".Contact-Link-Home--Container")
+const footer = document.querySelector("footer")
+const homeHeaderImagen = document.querySelector(".Home-Header--imagen");
+const homeHeaderText = document.querySelector(".Home-Header--text h1")
+const homeHeaderParrafo = document.querySelector(".Home-Header--text p")
+buttonContactNow.addEventListener("click", viewContact)
+contactNav.addEventListener("click", viewContact)
+navBarHome.addEventListener("click", viewHome)
 const divServicesContainer = document.querySelectorAll(
   ".Paragraph-Our-Services--container");
 const icons = document.querySelectorAll(".open");
 const paragraphDescription = document.querySelectorAll(".Paragraph-Our-Services--description");
+
+
+
 
 
 //funcion para aparecer los parrafos de descripcion
@@ -48,7 +58,6 @@ icons.forEach(function (icon, index) {
 
 const button = document.querySelectorAll('.buttons-navbar li a');
 const navbar = document.querySelector('.bg-nav');
-const contactNav = document.querySelector('#navBar--contacts')
 document.addEventListener('scroll', () => {
   if (window.scrollY > 200) {
     navbar.style.top = 0
@@ -395,11 +404,46 @@ function ladderSections(contenedores) {
 
 
 
+function viewContact() {
+  whatWeDoSection.classList.add("inactive")
+  WhoWeAreContainer.classList.add("inactive")
+  aboutUs.classList.add("inactive")
+  personalAttentionContainer.classList.add("inactive")
+  contactLinkHomeContainer.classList.add("inactive")
+  FormContactContainer.classList.remove("inactive")
+  InfoContactContainer.classList.remove("inactive")
+  homeHeaderImagen.style =
+    `background: url("/public/assets/img/contact-header.jpg");
+    background-size: cover;
+    clip-path: none;`
+  homeHeaderText.innerText = "We are here to help you."
+  homeHeaderParrafo.innerText = `ACT Consulting Inc.
+  Your must important accountant.`
+  homeHeaderParrafo.style =
+    `font-size: 1.7rem
+  `
+}
 
+function viewHome() {
+  whatWeDoSection.classList.remove("inactive")
+  WhoWeAreContainer.classList.remove("inactive")
+  aboutUs.classList.remove("inactive")
+  personalAttentionContainer.classList.remove("inactive")
+  contactLinkHomeContainer.classList.remove("inactive")
+  footer.classList.remove("inactive")
+  FormContactContainer.classList.add("inactive")
+  homeHeaderImagen.style =
+    ` background: url("/public/assets/img/about-header.jpg");
+     background-size: cover;
+       clip-path: ellipse(105% 76% at 50% 21%)
+        background-repeat: no-repeat;
+  background-position: center;
+   `
+  homeHeaderText.innerText = `Personal & Small
+Business`
+  homeHeaderParrafo.innerText = `Tax & Bookkeping Services.`
 
-
-
-
+}
 
 
 
