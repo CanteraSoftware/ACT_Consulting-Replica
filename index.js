@@ -1,15 +1,63 @@
+/* const open = document.querySelectorAll(".open");
+
+open.forEach((item) =>
+  item.addEventListener("mouseover", () => {
+    item.innerText = "-";
+  })
+); */
+
+const divServicesContainer = document.querySelectorAll(
+  ".Paragraph-Our-Services--container");
+const icons = document.querySelectorAll(".open");
+const paragraphDescription = document.querySelectorAll(".Paragraph-Our-Services--description");
+
+
+//funcion para aparecer los parrafos de descripcion
+
+// function openDescription() {
+//   if (
+//     divServicesContainer.forEach((paragraphDescription) => {
+//       paragraphDescription.classList.contains("inactive")
+
+//     })
+//   ) {
+//     divServicesContainer.forEach((paragraphDescription) => {
+//       paragraphDescription.classList.remove("inactive");
+
+//     });
+//   } else {
+//     divServicesContainer.forEach((paragraphDescription) => {
+//       paragraphDescription.classList.add("inactive");
+//     });
+//   }
+// }
+function toggleDescription(index) {
+  paragraphDescription.forEach(function (paragraph, i) {
+    if (i === index) {
+      paragraph.classList.toggle("inactive");
+    } else {
+      paragraph.classList.add("inactive");
+    }
+  });
+}
+icons.forEach(function (icon, index) {
+  icon.addEventListener("click", function () {
+    toggleDescription(index);
+  });
+})
+
 const button = document.querySelectorAll('.buttons-navbar li a');
 const navbar = document.querySelector('.bg-nav');
 const contactNav = document.querySelector('#navBar--contacts')
-document.addEventListener('scroll', () =>{
-    if (window.scrollY > 200) {
-        navbar.style.top = 0    
-        navbar.classList.add('scrolled');
-        button.forEach(item => item.classList.add('scrolled'))
-    }else{
-        navbar.classList.remove('scrolled')
-        button.forEach(item => item.classList.remove('scrolled'))
-    }
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    navbar.style.top = 0
+    navbar.classList.add('scrolled');
+    button.forEach(item => item.classList.add('scrolled'))
+  } else {
+    navbar.classList.remove('scrolled')
+    button.forEach(item => item.classList.remove('scrolled'))
+  }
 })
 //scroll top
 
@@ -23,13 +71,13 @@ const WhoWeAreDetails = document.querySelector(".Who-We-Are--Details");
 window.addEventListener("scroll", scrollanimacionWhoWeAre);
 
 function scrollanimacionWhoWeAre() {
-  if (elementIdentifier(WhoWeAreContainer)) { 
-    setTimeout( () => {
+  if (elementIdentifier(WhoWeAreContainer)) {
+    setTimeout(() => {
       WhoWeAreDescription.classList.remove("LadderAnimation");
-    WhoWeAreDetails.classList.remove("LadderAnimation");
+      WhoWeAreDetails.classList.remove("LadderAnimation");
     }, 400);
   }
-  } 
+}
 
 
 
@@ -42,10 +90,10 @@ window.addEventListener("scroll", scrollAnimationLinkConc)
 
 function scrollAnimationLinkConc() {
   if (elementIdentifier(contactsLinkes)) {
-    setTimeout( () => {
+    setTimeout(() => {
       contactsLink.classList.remove("opacityAnimation");
     }, 500);
-    
+
   }
 }
 
@@ -58,8 +106,8 @@ const ulListChequed = document.querySelectorAll(".ul-list-chequed");
 const whatWeDoSectionContainerul = document.querySelector(".what-we-do--section-Container-ul");
 
 
-window.addEventListener("scroll",scrollAnimationwhatWeDo);
-window.addEventListener("scroll",scrollAnimationwhatWeDoPT);
+window.addEventListener("scroll", scrollAnimationwhatWeDo);
+window.addEventListener("scroll", scrollAnimationwhatWeDoPT);
 
 
 function titleParrafoAnimation() {
@@ -99,11 +147,11 @@ const imgFormContactMensajesOn = document.querySelector(".imgFormContactMensajes
 
 imgformX.addEventListener("click", openMensajes);
 imgFormContactMensajesOn.addEventListener("click", openMensajes);
-textareaMessage.addEventListener("input",caracteresContente);
-inputTextName.addEventListener("input",nameValidator);
-inputEmail.addEventListener("input",emailValidator);
+textareaMessage.addEventListener("input", caracteresContente);
+inputTextName.addEventListener("input", nameValidator);
+inputEmail.addEventListener("input", emailValidator);
 
-submitButton.addEventListener("click", submitForm,false)
+submitButton.addEventListener("click", submitForm, false)
 
 
 /* Contenedores de textos de Error */
@@ -144,20 +192,20 @@ right: 4px;
 //Funciones de Formulario
 function caracteresContente() {
   let caracteresLength = textareaMessage.value.length
-  
-  if(!caracteresLength) {
+
+  if (!caracteresLength) {
     alertMessage.innerText = "You must write something."
     textareaMessage.style = `
     border-bottom: 2px solid red;
     border-right: 2px solid red;
     `
-  }else if (caracteresLength === 500) {
+  } else if (caracteresLength === 500) {
     alertMessage.innerText = "Your message can't have more than 500 characters."
     textareaMessage.style = `
     border-bottom: 2px solid red;
     border-right: 2px solid red;
     `
-  }   else{
+  } else {
     alertMessage.innerText = ""
     textareaMessage.style = `
     border:1px solid var(--hover-ligth-gray) ;
@@ -167,27 +215,27 @@ function caracteresContente() {
 
   if (caracteresLength > 0) {
     contadorDeCaracteres.innerText = caracteresLength + "-500";
-  }else{
+  } else {
     contadorDeCaracteres.innerText = "";
   }
-FormContactContainer.append(contadorDeCaracteres,alertMessage);
+  FormContactContainer.append(contadorDeCaracteres, alertMessage);
 }
 
-function nameValidator(){
+function nameValidator() {
   if (/[.*+?^${}()|[\]\\0-9-,¨´"]/.test(inputTextName.value)) {
     inputTextError.innerText = "You can't use numbers or symbols."
     inputTextName.style = `
     border-bottom: 2px solid red;
     border-left: 2px solid red;`
     FormContactContainer.append(inputTextError);
-  }else if(inputTextName.value.length === 0) {
+  } else if (inputTextName.value.length === 0) {
     inputTextError.innerText = "You must write something."
     inputTextName.style = `
     border-bottom: 2px solid red;
     border-right: 2px solid red;
     `
     FormContactContainer.append(inputTextError);
-  }else{
+  } else {
     inputTextError.innerText = ""
     inputTextName.style = `
     border:1px solid var(--hover-ligth-gray) ;
@@ -197,57 +245,57 @@ function nameValidator(){
 
 function emailValidator() {
   let email = inputEmail.value.split("@");
-    let firstEmail = email[0];
-    let secondEmail = email[1];
+  let firstEmail = email[0];
+  let secondEmail = email[1];
 
 
-    if ( /[.*+?¿!#%=|°~^${}()-,´"|[\]\\]/.test(firstEmail)) {
-      inputTextEmail.innerText = "You can't use symbols."
-      inputEmail.style = `
+  if (/[.*+?¿!#%=|°~^${}()-,´"|[\]\\]/.test(firstEmail)) {
+    inputTextEmail.innerText = "You can't use symbols."
+    inputEmail.style = `
       border-bottom: 2px solid red;
       border-left: 2px solid red;`
-      FormContactContainer.appendChild(inputTextEmail);
-    }else if ( /[0-9*+?!#%=|°~^${}()-,´"|[\]\\]/.test(secondEmail)) {
-      inputTextEmail.innerText = "You can't use symbols."
-      inputEmail.style = `
+    FormContactContainer.appendChild(inputTextEmail);
+  } else if (/[0-9*+?!#%=|°~^${}()-,´"|[\]\\]/.test(secondEmail)) {
+    inputTextEmail.innerText = "You can't use symbols."
+    inputEmail.style = `
     border-bottom: 2px solid red;
     border-left: 2px solid red;
     `
-      FormContactContainer.appendChild(inputTextEmail);
-    }else if(inputEmail.value.length === 0) {
-      inputTextEmail.innerText = "You must write something."
-      inputEmail.style = `
+    FormContactContainer.appendChild(inputTextEmail);
+  } else if (inputEmail.value.length === 0) {
+    inputTextEmail.innerText = "You must write something."
+    inputEmail.style = `
       border-bottom: 2px solid red;
       border-right: 2px solid red;
       `
-      FormContactContainer.append(inputTextEmail);
-    }else{
-      inputTextEmail.innerText = ""
-      inputEmail.style = `
+    FormContactContainer.append(inputTextEmail);
+  } else {
+    inputTextEmail.innerText = ""
+    inputEmail.style = `
       border:1px solid var(--hover-ligth-gray) ;
       `
-    };
+  };
 
-    if (email.length >= 3) {
-      inputTextEmail.innerText = "Invalid email"
-      inputEmail.style = `
+  if (email.length >= 3) {
+    inputTextEmail.innerText = "Invalid email"
+    inputEmail.style = `
     border-bottom: 2px solid red;
     border-left: 2px solid red;
     `
-    }
+  }
 }
 
 function submitForm(event) {
   let email = inputEmail.value
   let name = inputTextName.value
   let textarea = textareaMessage.value
-  
+
   if (!email || !name || !textarea) {
     event.preventDefault();
     emailValidator();
     nameValidator();
     caracteresContente();
-  }else{
+  } else {
     event.preventDefault();
     mensajesAgregados();
     nuevoMensaje();
@@ -262,7 +310,7 @@ const contenedorDeMensajesgENERAL = document.querySelector(".mensajesGenerales")
 function nuevoMensaje() {
   if (contenedorDeMensajesgENERAL.length == 0) {
     imgFormContactMensajesOn.classList.toggle("inactive");
-  }else if (imgFormContactMensajesOn.classList.contains("inactive")) {
+  } else if (imgFormContactMensajesOn.classList.contains("inactive")) {
     imgFormContactMensajesOn.classList.remove("inactive");
     imgFormContactMensajes.classList.add("inactive");
   };
@@ -277,30 +325,30 @@ function openMensajes() {
 
 function mensajesAgregados() {
 
-const contenedorDeMensajes = document.createElement("div");
-contenedorDeMensajes.style = `
+  const contenedorDeMensajes = document.createElement("div");
+  contenedorDeMensajes.style = `
 overflow-wrap: break-word;
 margin-bottom: 10px;
 ;
 `
-const contenedorDeMensajesName = document.createElement("h1");
+  const contenedorDeMensajesName = document.createElement("h1");
 
-const contenedorDeMensajesGmail = document.createElement("a");
+  const contenedorDeMensajesGmail = document.createElement("a");
 
-const contenedorDeMensajesMensaje = document.createElement("p");
-contenedorDeMensajesMensaje.style = `
+  const contenedorDeMensajesMensaje = document.createElement("p");
+  contenedorDeMensajesMensaje.style = `
 `
 
-contenedorDeMensajesName.innerText = `${inputTextName.value}`;
+  contenedorDeMensajesName.innerText = `${inputTextName.value}`;
 
-contenedorDeMensajesMensaje.innerText = `${textareaMessage.value}`;
+  contenedorDeMensajesMensaje.innerText = `${textareaMessage.value}`;
 
-contenedorDeMensajesMensaje.innerText = `${textareaMessage.value}`;
-contenedorDeMensajesGmail.innerText = `${inputEmail.value}`;
+  contenedorDeMensajesMensaje.innerText = `${textareaMessage.value}`;
+  contenedorDeMensajesGmail.innerText = `${inputEmail.value}`;
 
-FormContactContainer.appendChild(contenedorDeMensajesgENERAL);
-contenedorDeMensajesgENERAL.append(contenedorDeMensajes);
-contenedorDeMensajes.append(contenedorDeMensajesName,contenedorDeMensajesMensaje,contenedorDeMensajesGmail);
+  FormContactContainer.appendChild(contenedorDeMensajesgENERAL);
+  contenedorDeMensajesgENERAL.append(contenedorDeMensajes);
+  contenedorDeMensajes.append(contenedorDeMensajesName, contenedorDeMensajesMensaje, contenedorDeMensajesGmail);
 }
 
 
@@ -309,12 +357,12 @@ contenedorDeMensajes.append(contenedorDeMensajesName,contenedorDeMensajesMensaje
 const InfoContactContainer = document.querySelector(".Info-Contact--Container");
 const sectionDesplace = document.querySelectorAll(".section-desplace");
 
-window.addEventListener("scroll",scrollAnimationInfoContainer);
+window.addEventListener("scroll", scrollAnimationInfoContainer);
 
 function scrollAnimationInfoContainer() {
   if (elementIdentifier(InfoContactContainer)) { //que hace si esta en la pantalla
     ladderSections(sectionDesplace);
-  }else {//que hace si no esta en la pantalla
+  } else {//que hace si no esta en la pantalla
     console.log("hola mundo");
   }
 }
@@ -324,26 +372,28 @@ function scrollAnimationInfoContainer() {
 //funciones generales de animacion
 
 function elementIdentifier(elemento) { //esta funcion entrega si esta o no en la pantalla.
-  
-  let longi = elemento.getBoundingClientRect(); 
-  
+
+  let longi = elemento.getBoundingClientRect();
+
   return (
     longi.top < (window.innerHeight || document.documentElement.clientHeight) && longi.bottom > 0
   )
-  
+
 };
 
 /* animacion de escalera */
-function ladderSections (contenedores) {
+function ladderSections(contenedores) {
   let time = 500;
   for (let i = 0; i < contenedores.length; i++) {
-    time =+ time + 100
+    time = + time + 100
     const element = contenedores[i];
-    setTimeout( () => {
+    setTimeout(() => {
       element.classList.remove("LadderAnimation");
     }, time);
   }
 }
+
+
 
 
 
