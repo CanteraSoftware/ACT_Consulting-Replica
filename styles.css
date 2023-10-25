@@ -1,18 +1,26 @@
+
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+
 :root {
   --bg-beige: #f4f0ec;
   --bg-contact_link: #222220;
   --bg-gray: #f8f8f8;
   --FontFamily: "Cabin", sans-serif;
+  --hover-ligth-gray:#baab9e;
   --subtitle-Font-Size: 2.1rem;
 }
-html {
+
+
+html{
   font-size: 62.5%;
-  font-family: "Cabin", sans-serif;
+  font-family: 'Cabin', sans-serif;
+  color: var(--bg-contact_link);
 }
 /* navBar header */
 .buttons-navbar{
@@ -73,6 +81,7 @@ html {
   justify-content: center;
   align-items: center;
   margin-top: 110px;
+  margin-bottom: 150px;
   background-color: var(--bg-gray);
   padding: 70px 0 70px 0;
 }
@@ -130,8 +139,10 @@ html {
   height: 210px;
   gap: 20px;
   width: 70%;
-  margin: 100px auto;
+  margin: 0 auto;
+  margin-bottom: 150px;
   border-radius: 15px;
+  transition: all 0.2s ease;
 }
 .title-link {
   margin-top: 25px;
@@ -156,24 +167,70 @@ html {
   color: #222220;
 }
 
-/* Who we are container*/
 
-.Who-We-Are--Container {
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
+/* seccion what twe do */
+
+.what-we-do--section {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1000px;
+  font-size: 1.5rem;
+  margin-bottom: 150px;
 }
+
+.titleWhat-we-do{
+  transition: all 0.5s ease;
+}
+.whit-parrafo{
+  transition: all 1s ease;
+}
+.ul-list-chequed{
+  transition: all 0.2s ease;
+}
+.what-we-do--section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+.what-we-do--section .whit-parrafo{
+  margin-bottom: 55px;
+}
+.what-we-do--section div ul{
+  width: 209px;
+  margin-left: 50px;
+  text-align: start;
+}
+.what-we-do--section div ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+}
+.what-we-do--section div ul li p {
+  margin-right: 15px;
+}
+
+.what-we-do--section div {
+  display: flex;
+}
+
 /* Description container and children */
 
 .Who-We-Are--Description {
   flex-direction: column;
   display: flex;
   justify-content: right;
+  transition: all 0.5s ease;
 }
+
 .Who-We-Are--Description h1 {
   text-align: start;
   color: var(--bg-contact_link);
   font-size: 2.2rem;
+}
+
+.Who-We-Are--Container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
 }
 .Who-We-Are--Description p {
   text-align: start;
@@ -183,6 +240,152 @@ html {
   font-size: 1.5rem;
   margin: 10px auto 0 auto;
 }
+
+
+  /*form*/
+
+  .img-form-contact--Mensajes{
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .Form-Contact--Container{
+    margin: 0 auto;
+    padding-left: 48px; ;
+    max-width: 690px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 150px;
+    position: relative;
+  }
+  .user-Data-Container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+  .user-Data-Container div {
+  width: 48%;
+  height: 50px;  
+  border-radius: 3px;
+  }
+  .Form-Contact--Container p {
+    margin-bottom: 10px;
+  }
+  .user-Data-Container div input{
+    width: 100%;
+    height: 30px;
+    padding: 0 5px;
+    outline: none;
+    border-radius: 3px;
+    border:1px solid var(--hover-ligth-gray) ;
+    
+  }
+
+  .message-Container  textarea{
+    padding: 5px 5px;
+    padding-bottom: 16px;
+    border-radius: 3px;
+    border:1px solid var(--hover-ligth-gray) ;
+    outline: none;
+    
+    resize: none;
+  }
+  .message-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+  .message-Container button{
+    background: var(--bg-contact_link);
+    color: var(--bg-gray);
+    font-family:var(--FontFamily) ;
+    width: 150px;
+    height: 39px;
+    border-radius: 6px;
+    border: none;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all .5s ease;
+  }
+  .message-Container button:hover{
+  background: var(--hover-ligth-gray);
+  }
+
+  .contenedor-De-Mensajes-gENERAL{
+    position: absolute;
+    transition: all 0.5s ease;
+    top: 0px;
+    left: 47px;
+    width: 645px;
+    font-size: 1.5rem;
+    padding: 5px;
+    background: #f4f0ec;
+    box-shadow: 6px 7px 50px -35px rgba(0,0,0,0.75);
+    
+  }
+
+  .img-form-contact--MensajesX{
+    height: 30px;
+    margin-left: 50%;
+    cursor: pointer;
+  }
+  
+  .contenedor-De-Mensajes-gENERAL-animation{ 
+    opacity: 0;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+  }
+
+  /* section de Info Contact */
+
+.Info-Contact--Container{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  transition: all 0.5s ease;
+
+  max-width: 650px;
+  
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 150px;
+  
+  
+}
+.Info-Contact--Container section{
+  display: flex;
+  flex-direction: column;
+}
+.section-desplace{
+transition: all 0.2s ease;
+}
+.Info-Contact--Container section h1{
+  font-size: 2.3rem;
+  margin-bottom:  17px ;
+}
+.Info-Contact--Container section h2{
+  font-size: 1.5rem;
+  margin-bottom: 10px ;
+}
+
+.Info-Contact--Container section a{
+  color: var(--bg-contact_link);
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+.Info-Contact--Container section a:hover{
+  color: var(--hover-ligth-gray);
+}
+.Info-Contact--Container section p{
+  margin-bottom: 5px;
+}
+
+
+
+
 /* Details container and children */
 
 .Who-We-Are--Details {
@@ -190,6 +393,7 @@ html {
   display: flex;
   margin-left: 20px;
   justify-content: left;
+  transition: all 0.5s ease;
 }
 .Who-We-Are--Details h4{
     font-size: 1.6rem;
@@ -222,8 +426,7 @@ html {
 .Personal-Attention--Container {
   background-color: var(--bg-beige);
   display: flex;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   color: var(--bg-contact_link);
 }
 /* Personal Attention Img */
@@ -236,6 +439,9 @@ html {
   height: 400px;
   width: 610px;
 }
+
+
+
 
 /* Personal Attention Details */
 .Personal-Attention--Container section {
@@ -329,3 +535,21 @@ footer a{
     color: var(--bg-contact_link);
     font-size: 1.3rem;
 }
+
+
+/* animations */
+
+.LadderAnimation {
+  opacity: 0;
+  transform: translate(0px ,70px);
+}
+
+.opacityAnimation {
+opacity: 0;
+}
+
+/* inactive */
+.inactive {
+  display: none;
+}
+
