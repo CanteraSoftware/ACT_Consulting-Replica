@@ -284,8 +284,6 @@ function submitForm(event) {
     caracteresContente();
   } else {
     event.preventDefault();
-    mensajesAgregados();
-    nuevoMensaje();
     inputTextName.value = "";
     textareaMessage.value = "";
     inputEmail.value = "";
