@@ -93,15 +93,6 @@ function scrollAnimationLinkConc() {
   }
 }
 
-//animacion de what we do
-const whatWeDoSection = document.querySelector(".what-we-do--section");
-const titleWhatWeDo = document.querySelector(".titleWhat-we-do");
-const whitParrafo = document.querySelector(".whit-parrafo");
-const ulListChequed = document.querySelectorAll(".ul-list-chequed");
-const whatWeDoSectionContainerul = document.querySelector(
-  ".what-we-do--section-Container-ul"
-);
-
 window.addEventListener("scroll", scrollAnimationwhatWeDo);
 window.addEventListener("scroll", scrollAnimationwhatWeDoPT);
 
@@ -365,6 +356,7 @@ function elementIdentifier(elemento) {
 }
 
 /* animacion de escalera */
+
 function ladderSections(contenedores) {
   let time = 500;
   for (let i = 0; i < contenedores.length; i++) {
