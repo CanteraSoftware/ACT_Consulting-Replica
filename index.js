@@ -319,8 +319,6 @@ function submitForm(event) {
     caracteresContente();
   } else {
     event.preventDefault();
-    mensajesAgregados();
-    nuevoMensaje();
     inputTextName.value = "";
     textareaMessage.value = "";
     inputEmail.value = "";
@@ -447,15 +445,14 @@ function viewHome() {
   FormContactContainer.classList.add("inactive")
   homeHeaderImagen.style =
     ` background: url("/public/assets/img/about-header.jpg");
-     background-size: cover;
-       clip-path: ellipse(105% 76% at 50% 21%)
-        background-repeat: no-repeat;
-  background-position: center;
-   `
+      background-size: cover;
+      clip-path: ellipse(105% 76% at 50% 21%)
+      background-repeat: no-repeat;
+      background-position: center;
+    `
   homeHeaderText.innerText = `Personal & Small
 Business`
   homeHeaderParrafo.innerText = `Tax & Bookkeping Services.`
-
 }
 
 

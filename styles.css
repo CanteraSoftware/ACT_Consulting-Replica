@@ -728,6 +728,9 @@ footer a {
   opacity: 0;
   transform: translate(0px, 70px);
 }
+body{
+  transition: all 1.5s ease;
+}
 
 .opacityAnimation {
   opacity: 0;
