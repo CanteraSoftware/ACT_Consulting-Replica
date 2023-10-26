@@ -101,6 +101,7 @@ html {
 .button-link:hover {
   background-color: white;
   color: #222220;
+  cursor: pointer;
 }
 
 /* Who we are container*/
