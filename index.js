@@ -31,6 +31,7 @@ const homeHeaderParrafo = document.querySelector(".Home-Header--text p");
 buttonContactNow.addEventListener("click", viewContact);
 contactNav.addEventListener("click", viewContact);
 navBarHome.addEventListener("click", viewHome);
+const ourServiceContainer = document.querySelector(".Our-Services--container");
 const divServicesContainer = document.querySelectorAll(
   ".Paragraph-Our-Services--container"
 );
@@ -404,11 +405,12 @@ function viewContact() {
   WhoWeAreContainer.classList.add("inactive");
   aboutUs.classList.add("inactive");
   personalAttentionContainer.classList.add("inactive");
+  ourServiceContainer.classList.add("inactive");
   contactLinkHomeContainer.classList.add("inactive");
   FormContactContainer.classList.remove("inactive");
   InfoContactContainer.classList.remove("inactive");
-  homeHeaderImagen.style = `
-    background: url("/public/assets/img/contact-header.jpg");
+  homeHeaderImagen.style = `background: url("/public/assets/img/contact-header.jpg");
+>>>>>>> e5e9403efd67b256c0aa278c2945fcb4cb11b4a6
     background-size: cover;
     clip-path: none;
     `;
@@ -424,16 +426,17 @@ function viewHome() {
   WhoWeAreContainer.classList.remove("inactive");
   aboutUs.classList.remove("inactive");
   personalAttentionContainer.classList.remove("inactive");
+  ourServiceContainer.classList.remove("inactive");
   contactLinkHomeContainer.classList.remove("inactive");
   footer.classList.remove("inactive");
   FormContactContainer.classList.add("inactive");
-  homeHeaderImagen.style = ` 
-    background: url("/public/assets/img/about-header.jpg");
-     background-size: cover;
-       clip-path: ellipse(105% 76% at 50% 21%)
-        background-repeat: no-repeat;
-  background-position: center;
-   `;
+  InfoContactContainer.classList.add("inactive");
+  homeHeaderImagen.style = ` background: url("/public/assets/img/about-header.jpg");
+      background-size: cover;
+      clip-path: ellipse(105% 76% at 50% 21%)
+      background-repeat: no-repeat;
+      background-position: center;
+    `;
   homeHeaderText.innerText = `Personal & Small
 Business`;
   homeHeaderParrafo.innerText = `Tax & Bookkeping Services.`;
