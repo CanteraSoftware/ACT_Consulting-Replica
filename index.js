@@ -13,6 +13,7 @@ const homeHeaderParrafo = document.querySelector(".Home-Header--text p")
 buttonContactNow.addEventListener("click", viewContact)
 contactNav.addEventListener("click", viewContact)
 navBarHome.addEventListener("click", viewHome)
+const ourServiceContainer = document.querySelector(".Our-Services--container")
 const divServicesContainer = document.querySelectorAll(
   ".Paragraph-Our-Services--container");
 const icons = document.querySelectorAll(".open");
@@ -65,11 +66,9 @@ icons.forEach(function (icon, index) {
 })
 
 
-
-
-
 const button = document.querySelectorAll('.buttons-navbar li a');
 const navbar = document.querySelector('.bg-nav');
+
 document.addEventListener('scroll', () => {
   if (window.scrollY > 200) {
     navbar.style.top = 0
@@ -96,8 +95,6 @@ function scrollanimacionWhoWeAre() {
     }, 400);
   }
 }
-
-
 
 //animacion de link contac
 
@@ -148,11 +145,6 @@ function scrollAnimationwhatWeDo() {
   } */
 }
 
-
-
-
-
-
 //form
 const FormContactContainer = document.querySelector(".Form-Contact--Container");
 const inputTextName = document.querySelector(".input-text");
@@ -168,7 +160,6 @@ imgFormContactMensajesOn.addEventListener("click", openMensajes); */
 textareaMessage.addEventListener("input", caracteresContente);
 inputTextName.addEventListener("input", nameValidator);
 inputEmail.addEventListener("input", emailValidator);
-
 submitButton.addEventListener("click", submitForm, false)
 
 
@@ -203,7 +194,6 @@ position: absolute;
 bottom: 63px;
 right: 4px;
 `
-
 
 
 
@@ -416,6 +406,7 @@ function viewContact() {
   WhoWeAreContainer.classList.add("inactive")
   aboutUs.classList.add("inactive")
   personalAttentionContainer.classList.add("inactive")
+  ourServiceContainer.classList.add("inactive")
   contactLinkHomeContainer.classList.add("inactive")
   FormContactContainer.classList.remove("inactive")
   InfoContactContainer.classList.remove("inactive")
@@ -436,9 +427,11 @@ function viewHome() {
   WhoWeAreContainer.classList.remove("inactive")
   aboutUs.classList.remove("inactive")
   personalAttentionContainer.classList.remove("inactive")
+  ourServiceContainer.classList.remove("inactive")
   contactLinkHomeContainer.classList.remove("inactive")
   footer.classList.remove("inactive")
   FormContactContainer.classList.add("inactive")
+  InfoContactContainer.classList.add("inactive")
   homeHeaderImagen.style =
     ` background: url("/public/assets/img/about-header.jpg");
       background-size: cover;
