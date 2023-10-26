@@ -142,15 +142,15 @@ const inputTextName = document.querySelector(".input-text");
 const inputEmail = document.querySelector(".input-Email");
 const textareaMessage = document.querySelector("#textarea-message");
 const submitButton = document.querySelector(".button-SendMessage");
-const imgFormContactMensajes = document.querySelector(".img-form-contact--Mensajes-off");
+/* const imgFormContactMensajes = document.querySelector(".img-form-contact--Mensajes-off");
 const imgformX = document.querySelector(".img-form");
-const imgFormContactMensajesOn = document.querySelector(".imgFormContactMensajesOn");
+const imgFormContactMensajesOn = document.querySelector(".imgFormContactMensajesOn"); */
 
-imgformX.addEventListener("click", openMensajes);
-imgFormContactMensajesOn.addEventListener("click", openMensajes);
-textareaMessage.addEventListener("input", caracteresContente);
-inputTextName.addEventListener("input", nameValidator);
-inputEmail.addEventListener("input", emailValidator);
+/* imgformX.addEventListener("click", openMensajes);
+imgFormContactMensajesOn.addEventListener("click", openMensajes); */
+textareaMessage.addEventListener("input",caracteresContente);
+inputTextName.addEventListener("input",nameValidator);
+inputEmail.addEventListener("input",emailValidator);
 
 submitButton.addEventListener("click", submitForm, false)
 
@@ -159,7 +159,7 @@ submitButton.addEventListener("click", submitForm, false)
 const inputTextError = document.createElement("div");
 inputTextError.style = `
 position: absolute;
-top: 30px;
+top: 1px;
 left: 130px;
 color: red;
 `
@@ -167,7 +167,7 @@ color: red;
 const inputTextEmail = document.createElement("div");
 inputTextEmail.style = `
 position: absolute;
-top: 30px;
+top: 1px;
 left: 480px;
 color: red;
 `
@@ -307,7 +307,7 @@ function submitForm(event) {
 }
 
 
-const contenedorDeMensajesgENERAL = document.querySelector(".mensajesGenerales");
+/* const contenedorDeMensajesgENERAL = document.querySelector(".mensajesGenerales");
 function nuevoMensaje() {
   if (contenedorDeMensajesgENERAL.length == 0) {
     imgFormContactMensajesOn.classList.toggle("inactive");
@@ -347,10 +347,10 @@ margin-bottom: 10px;
   contenedorDeMensajesMensaje.innerText = `${textareaMessage.value}`;
   contenedorDeMensajesGmail.innerText = `${inputEmail.value}`;
 
-  FormContactContainer.appendChild(contenedorDeMensajesgENERAL);
-  contenedorDeMensajesgENERAL.append(contenedorDeMensajes);
-  contenedorDeMensajes.append(contenedorDeMensajesName, contenedorDeMensajesMensaje, contenedorDeMensajesGmail);
-}
+FormContactContainer.appendChild(contenedorDeMensajesgENERAL);
+contenedorDeMensajesgENERAL.append(contenedorDeMensajes);
+contenedorDeMensajes.append(contenedorDeMensajesName,contenedorDeMensajesMensaje,contenedorDeMensajesGmail);
+} */
 
 
 
