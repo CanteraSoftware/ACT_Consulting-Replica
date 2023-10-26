@@ -19,19 +19,54 @@ const icons = document.querySelectorAll(".open");
 const paragraphDescription = document.querySelectorAll(".Paragraph-Our-Services--description");
 
 function toggleDescription(index) {
-  paragraphDescription.forEach(function (paragraph, i) {
+  divServicesContainer.forEach(function (paragraph, i) {
+
     if (i === index) {
-      paragraph.classList.toggle("inactive");
+
+      paragraph.classList.toggle("container-heigth");
+
     } else {
-      paragraph.classList.add("inactive");
+      paragraph.classList.remove("container-heigth");
     }
-  });
+
+  }
+
+  )
+  icons.forEach(function (icono, i) {
+
+    if (i === index) {
+      if (!icono.classList.contains("closed")) {
+        icono.classList.add("closed");
+        icono.textContent = "-"
+
+      } else {
+        icono.classList.remove("closed");
+        icono.textContent = "+"
+      }
+    } else {
+
+      if (icono.classList.contains("closed")) {
+        icono.classList.remove("closed");
+        icono.textContent = "+"
+      }
+
+    }
+  }
+
+  )
+    ;
 }
+
 icons.forEach(function (icon, index) {
   icon.addEventListener("click", function () {
     toggleDescription(index);
+
   });
 })
+
+
+
+
 
 const button = document.querySelectorAll('.buttons-navbar li a');
 const navbar = document.querySelector('.bg-nav');
@@ -130,9 +165,9 @@ const imgFormContactMensajesOn = document.querySelector(".imgFormContactMensajes
 
 /* imgformX.addEventListener("click", openMensajes);
 imgFormContactMensajesOn.addEventListener("click", openMensajes); */
-textareaMessage.addEventListener("input",caracteresContente);
-inputTextName.addEventListener("input",nameValidator);
-inputEmail.addEventListener("input",emailValidator);
+textareaMessage.addEventListener("input", caracteresContente);
+inputTextName.addEventListener("input", nameValidator);
+inputEmail.addEventListener("input", emailValidator);
 
 submitButton.addEventListener("click", submitForm, false)
 
