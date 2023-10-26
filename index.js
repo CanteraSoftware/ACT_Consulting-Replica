@@ -394,6 +394,15 @@ function ladderSections(contenedores) {
   }
 }
 
+/*redireccion de secciones*/
+const ourService = document.querySelector('#Our-Service');
+const Home = document.querySelector('#Home');
+const About = document.querySelector('#About-us');
+function scrollService (container){
+    container.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+}
+
+
 
 
 
