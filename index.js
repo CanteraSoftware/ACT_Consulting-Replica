@@ -1,8 +1,12 @@
 //opacity body
 const body = document.querySelector("body");
 
+let releading = 1;
 function opacityLoad() {
-  body.classList.remove("opacityAnimation");
+  if (releading >= 1) {
+    body.classList.remove("opacityAnimation");
+    releading--;
+  }
 }
 
 window.addEventListener("load", opacityLoad);
@@ -12,6 +16,7 @@ const buttonContactNow = document.querySelector(".button-link");
 /*click en el nav contact */
 const contactNav = document.querySelector("#navBar--contacts");
 const navBarHome = document.querySelector("#navBar--home");
+navBarHome.addEventListener("click", opacityLoad);
 const aboutUs = document.querySelector(".about-us");
 const personalAttentionContainer = document.querySelector(
   ".Personal-Attention--Container"
