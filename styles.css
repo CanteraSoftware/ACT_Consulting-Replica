@@ -232,8 +232,7 @@ header nav {
   color: #222220;
 }
 
-/* Our Services
-.Our-Services--container {
+/* .Our-Services--container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -296,7 +295,8 @@ header nav {
   font-size: 1.3rem;
   margin-left: 20px;
   margin-bottom: 10px;
-}*/
+} */
+
 /* seccion what twe do */
 
 .what-we-do--section {

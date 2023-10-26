@@ -18,29 +18,6 @@ const divServicesContainer = document.querySelectorAll(
 const icons = document.querySelectorAll(".open");
 const paragraphDescription = document.querySelectorAll(".Paragraph-Our-Services--description");
 
-
-
-
-
-//funcion para aparecer los parrafos de descripcion
-
-// function openDescription() {
-//   if (
-//     divServicesContainer.forEach((paragraphDescription) => {
-//       paragraphDescription.classList.contains("inactive")
-
-//     })
-//   ) {
-//     divServicesContainer.forEach((paragraphDescription) => {
-//       paragraphDescription.classList.remove("inactive");
-
-//     });
-//   } else {
-//     divServicesContainer.forEach((paragraphDescription) => {
-//       paragraphDescription.classList.add("inactive");
-//     });
-//   }
-// }
 function toggleDescription(index) {
   paragraphDescription.forEach(function (paragraph, i) {
     if (i === index) {
@@ -69,9 +46,6 @@ document.addEventListener('scroll', () => {
   }
 })
 //scroll top
-
-
-
 //animacion de what we are
 const WhoWeAreContainer = document.querySelector(".Who-We-Are--Container");
 const WhoWeAreDescription = document.querySelector(".Who-We-Are--Description");
