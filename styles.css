@@ -90,6 +90,7 @@ header nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 180px;
 }
 
 /* section contenedor header home imagen*/
@@ -232,11 +233,12 @@ header nav {
   color: #222220;
 }
 
-/* .Our-Services--container {
+.Our-Services--container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  margin-bottom: 180px;
 }
 
 .Our-Services--container h1 {
@@ -248,12 +250,15 @@ header nav {
 }
 
 .Paragraph-Our-Services--container {
+  height: 53px;
   border: 1px solid #6c6a6a4d;
   width: 530px;
   margin: 20px 0;
   display: flex;
+  overflow: hidden;
   align-items: center;
   flex-direction: column;
+  transition: all 0.5s ease;
 
 }
 
@@ -263,7 +268,8 @@ header nav {
   width: 530px;
   margin-top: 10px;
   align-items: center;
-  transition: all 0.5 ease;
+  transition: all ease .5s;
+
 }
 
 .Our-Services section {
@@ -274,12 +280,17 @@ header nav {
 .open {
   font-size: 3rem;
   margin-right: 20px;
+  transition: all ease .5s;
+  transform: rotate(1deg);
+  cursor: pointer;
+}
+
+.closed {
+  transform: rotate(180deg);
   transition: all 0.5s ease;
 }
 
-.open:hover {
-  transform: rotate(90deg);
-}
+
 
 .Paragraph-Our-Services--title {
   font-size: 1.5rem;
@@ -290,12 +301,21 @@ header nav {
   display: none;
 }
 
+.parrafotranslate {
+  transform: translateY(4px);
+}
+
+.container-heigth {
+  height: 86px;
+}
+
 .Paragraph-Our-Services--description {
   align-self: flex-start;
   font-size: 1.3rem;
   margin-left: 20px;
   margin-bottom: 10px;
-} */
+  transition: all ease .5s;
+}
 
 /* seccion what twe do */
 
@@ -714,6 +734,6 @@ footer a {
 }
 
 /* inactive */
-.inactive {
+/* .inactive {
   display: none;
-}
+} */
