@@ -39,14 +39,10 @@ function toggleDescription(index) {
         icono.classList.add("closed");
         icono.textContent = "-"
 
-
       } else {
         icono.classList.remove("closed");
         icono.textContent = "+"
       }
-
-
-
     } else {
 
       if (icono.classList.contains("closed")) {

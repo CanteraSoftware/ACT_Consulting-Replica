@@ -241,6 +241,7 @@ header nav {
   margin-bottom: 180px;
 }
 
+/* Seccion Our Services*/
 .Our-Services--container h1 {
   font-size: var(--subtitle-Font-Size);
 }
@@ -290,15 +291,9 @@ header nav {
   transition: all 0.5s ease;
 }
 
-
-
 .Paragraph-Our-Services--title {
   font-size: 1.5rem;
   margin-left: 20px;
-}
-
-.inactive {
-  display: none;
 }
 
 .parrafotranslate {
@@ -728,7 +723,8 @@ footer a {
   opacity: 0;
   transform: translate(0px, 70px);
 }
-body{
+
+body {
   transition: all 1.5s ease;
 }
 
@@ -737,6 +733,7 @@ body{
 }
 
 /* inactive */
-/* .inactive {
+
+.inactive {
   display: none;
-} */
+}
