@@ -431,6 +431,7 @@ function viewHome() {
   contactLinkHomeContainer.classList.remove("inactive")
   footer.classList.remove("inactive")
   FormContactContainer.classList.add("inactive")
+  InfoContactContainer.classList.add("inactive")
   homeHeaderImagen.style =
     ` background: url("/public/assets/img/about-header.jpg");
       background-size: cover;
