@@ -35,14 +35,31 @@ const paragraphDescription = document.querySelectorAll(
 );
 
 function toggleDescription(index) {
-  paragraphDescription.forEach(function (paragraph, i) {
+  divServicesContainer.forEach(function (paragraph, i) {
     if (i === index) {
-      paragraph.classList.toggle("inactive");
+      paragraph.classList.toggle("container-heigth");
     } else {
-      paragraph.classList.add("inactive");
+      paragraph.classList.remove("container-heigth");
+    }
+  });
+  icons.forEach(function (icono, i) {
+    if (i === index) {
+      if (!icono.classList.contains("closed")) {
+        icono.classList.add("closed");
+        icono.textContent = "-";
+      } else {
+        icono.classList.remove("closed");
+        icono.textContent = "+";
+      }
+    } else {
+      if (icono.classList.contains("closed")) {
+        icono.classList.remove("closed");
+        icono.textContent = "+";
+      }
     }
   });
 }
+
 icons.forEach(function (icon, index) {
   icon.addEventListener("click", function () {
     toggleDescription(index);
@@ -51,6 +68,7 @@ icons.forEach(function (icon, index) {
 
 const button = document.querySelectorAll(".buttons-navbar li a");
 const navbar = document.querySelector(".bg-nav");
+
 document.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     navbar.style.top = 0;
@@ -61,6 +79,7 @@ document.addEventListener("scroll", () => {
     button.forEach((item) => item.classList.remove("scrolled"));
   }
 });
+
 //scroll top
 //animacion de what we are
 const WhoWeAreContainer = document.querySelector(".Who-We-Are--Container");
@@ -92,6 +111,14 @@ function scrollAnimationLinkConc() {
     }, 500);
   }
 }
+//animacion de what we do
+const whatWeDoSection = document.querySelector(".what-we-do--section");
+const titleWhatWeDo = document.querySelector(".titleWhat-we-do");
+const whitParrafo = document.querySelector(".whit-parrafo");
+const ulListChequed = document.querySelectorAll(".ul-list-chequed");
+const whatWeDoSectionContainerul = document.querySelector(
+  ".what-we-do--section-Container-ul"
+);
 
 window.addEventListener("scroll", scrollAnimationwhatWeDo);
 window.addEventListener("scroll", scrollAnimationwhatWeDoPT);
@@ -133,7 +160,6 @@ imgFormContactMensajesOn.addEventListener("click", openMensajes); */
 textareaMessage.addEventListener("input", caracteresContente);
 inputTextName.addEventListener("input", nameValidator);
 inputEmail.addEventListener("input", emailValidator);
-
 submitButton.addEventListener("click", submitForm, false);
 
 /* Contenedores de textos de Error */
@@ -376,9 +402,11 @@ function viewContact() {
   contactLinkHomeContainer.classList.add("inactive");
   FormContactContainer.classList.remove("inactive");
   InfoContactContainer.classList.remove("inactive");
-  homeHeaderImagen.style = `background: url("/public/assets/img/contact-header.jpg");
+  homeHeaderImagen.style = `
+    background: url("/public/assets/img/contact-header.jpg");
     background-size: cover;
-    clip-path: none;`;
+    clip-path: none;
+    `;
   homeHeaderText.innerText = "We are here to help you.";
   homeHeaderParrafo.innerText = `ACT Consulting Inc.
   Your must important accountant.`;
@@ -394,7 +422,8 @@ function viewHome() {
   contactLinkHomeContainer.classList.remove("inactive");
   footer.classList.remove("inactive");
   FormContactContainer.classList.add("inactive");
-  homeHeaderImagen.style = ` background: url("/public/assets/img/about-header.jpg");
+  homeHeaderImagen.style = ` 
+    background: url("/public/assets/img/about-header.jpg");
      background-size: cover;
        clip-path: ellipse(105% 76% at 50% 21%)
         background-repeat: no-repeat;
