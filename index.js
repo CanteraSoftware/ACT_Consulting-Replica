@@ -6,9 +6,14 @@ const navBarHome = document.querySelector("#navBar--home");
 const aboutUs = document.querySelector(".about-us");
 const footer = document.querySelector("footer");
 const homeHeaderImagen = document.querySelector(".Home-Header--imagen");
-const homeHeaderText = document.querySelector(".Home-Header--text h1");
-const homeHeaderParrafo = document.querySelector(".Home-Header--text p");
+const homeHeaderText = document.querySelector(".Home-Header--text h1")
+const homeHeaderParrafo = document.querySelector(".Home-Header--text p")
 const ourServiceContainer = document.querySelector(".Our-Services--container");
+const ourServiceTittle = document.querySelector(".Our-Services--tittle ")
+const ourServiceTittleSecond = document.querySelector(".Our-Services--secondTittle")
+const divServicesContainer = document.querySelectorAll(
+  ".Paragraph-Our-Services--container");
+const ourServicesSection = document.querySelector(".Our-services--section")
 const icons = document.querySelectorAll(".open");
 const button = document.querySelectorAll('.buttons-navbar li a');
 const navbar = document.querySelector('.bg-nav');
@@ -41,9 +46,7 @@ const personalAttentionContainer = document.querySelector(
 const contactLinkHomeContainer = document.querySelector(
   ".Contact-Link-Home--Container"
 );
-const divServicesContainer = document.querySelectorAll(
-  ".Paragraph-Our-Services--container"
-);
+
 const paragraphDescription = document.querySelectorAll(
   ".Paragraph-Our-Services--description"
 );
@@ -76,17 +79,22 @@ contactNav.addEventListener("click", viewContact);
 navBarHome.addEventListener("click", viewHome);
 
 
+
+
+// funcion para desplegar los Our Services
 function toggleDescription(index) {
   divServicesContainer.forEach(function (paragraph, i) {
     if (i === index) {
-      paragraph.classList.toggle("container-heigth");
+
+      paragraph.classList.toggle("container-heigth"); // animacion para que suba y baje el parrafo
+
     } else {
       paragraph.classList.remove("container-heigth");
     }
   });
   icons.forEach(function (icono, i) {
     if (i === index) {
-      if (!icono.classList.contains("closed")) {
+      if (!icono.classList.contains("closed")) { //itera por cada icono en caso que se abra cambia el icono
         icono.classList.add("closed");
         icono.textContent = "-";
       } else {
@@ -109,7 +117,7 @@ function toggleDescription(index) {
   });
 }
 
-icons.forEach(function (icon, index) {
+icons.forEach(function (icon, index) { //l clickear los iconos se abra o cierra el contenedor 
   icon.addEventListener("click", function () {
     toggleDescription(index);
   });
@@ -146,6 +154,28 @@ function scrollanimacionWhoWeAre() {
     }, 400);
   }
 }
+//animacion para OurServices
+
+window.addEventListener("scroll", scrollAnimationOurServices);
+
+function animationOurServices(contenedor) {
+  contenedor.classList.remove("LadderAnimation")
+}
+
+function scrollAnimationOurServices() {
+  if (elementIdentifier(ourServiceTittle)) {
+    animationOurServices(ourServiceTittle);
+    animationOurServices(ourServiceTittleSecond)
+  }
+
+  if (elementIdentifier(ourServicesSection)) {
+    animationOurServices(ourServicesSection)
+  }
+
+}
+window.addEventListener("scroll", scrollAnimationOurServices);
+
+
 
 //animacion de link contac
 
@@ -423,6 +453,10 @@ function ladderSections(contenedores) {
     }, time);
   }
 }
+/* Funciones para cambiar las vistas Home y contact cambiando los estilos del Header*/
+buttonContactNow.addEventListener("click", viewContact)
+contactNav.addEventListener("click", viewContact)
+navBarHome.addEventListener("click", viewHome)
 
 function viewContact() {
   whatWeDoSection.classList.add("inactive");
