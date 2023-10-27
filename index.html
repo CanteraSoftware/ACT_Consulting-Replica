@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,27 +13,29 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="opacityAnimation">
+
     <!-- navbar header -->
     <header>
-  <section class="Home-Header--container" id="Home">
-    <div class="Home-Header--imagen">
-  </div>
-     <div class="Home-Header--text">
-      <h1>Personal & Small <br> Businesss</h1>
-    <p>Tax & Bookkeping Services</p>
-     </div>
-  </section>
-</header>
+        <section class="Home-Header--container" id="Home">
+            <div class="Home-Header--imagen">
+            </div>
+            <div class="Home-Header--text">
+                <h1>Personal & Small <br> Business</h1>
+                <p>Tax & Bookkeping Services</p>
+            </div>
+        </section>
+    </header>
     <div class="bg-nav"></div>
     <nav>
         <ul class="buttons-navbar">
-            <li><a href="">Home</a></li>
+            <li><a href="" id="navBar--home">Home</a></li>
             <li><a href="javascript: scrollService (About)">About</a></li>
             <li><a href="javascript: scrollService (ourService)">Our Services</a></li>
-            <li><a id="NavBar--contacts" href="">Contacts</a></li>
+            <li><a id="navBar--contacts" href="#">Contacts</a></li>
         </ul>
     </nav>
+    </header>
     <!-- cierre de etiqueta header -->
 
     <section class="what-we-do--section">
@@ -136,6 +137,7 @@
             </div>
         </section>
     </section>
+    
 
     <section class="Who-We-Are--Container ">
         <section class="Who-We-Are--Description LadderAnimation">
@@ -160,7 +162,7 @@
         </section>
     </section>
 
-    <section  id="Our-Service" class="Personal-Attention--Container">
+    <section class="Personal-Attention--Container">
         <div class="Personal-Attention--img"></div>
         <section>
             <h1>Personal Attention</h1>
@@ -175,82 +177,98 @@
                 Service!</p>
         </section>
     </section>
-    
- <!-- <section class="Our-Services--container">
-    <h1> Our Services</h1>
-    <p class="Our-Services--title">"Behing every good Business is a great Accountant.."</p>
-    <section>
+    </section>
 
-      <div class="Paragraph-Our-Services--container">
-        <div class="Paragraph-Our-Services--other">
-          <p class="Paragraph-Our-Services--title">Accounting & Bookkeeping.</p>
-          <span class="open">+</span>
-        </div>
-        <p class="Paragraph-Our-Services--description inactive"> We provide several services to ensure your business
-          sucess.</p>
-      </div>
-  
-      <div class="Paragraph-Our-Services--container">
-        <div class="Paragraph-Our-Services--other">
-          <p class="Paragraph-Our-Services--title">International Services.</p>
-          <span class="open">+</span>
-       
-        </div>
-        <p class="Paragraph-Our-Services--description inactive">Consutancy and operational services for internationally
-          expanding
-          companies.</p>
+    <section id="Our-Service"  class="Our-Services--container">
+        <h1> Our Services</h1>
+        <p class="Our-Services--title">"Behing every good Business is a great Accountant.."</p>
+        <section>
 
-      </div>
+            <div class="Paragraph-Our-Services--container">
+                <div class="Paragraph-Our-Services--other">
+                    <p class="Paragraph-Our-Services--title">Accounting & Bookkeeping.</p>
+                    <span class="open">+</span>
 
-      <div class="Paragraph-Our-Services--container">
-        <div class="Paragraph-Our-Services--other">
-          <p class="Paragraph-Our-Services--title">Delaware Company Formation.</p>
-          <span class="open">+</span>
-        </div>
-        <p class="Paragraph-Our-Services--description inactive ">Specialized company formation including insurance and
-          business
-          trusts.
-        </p>
+                </div>
+                <p class="Paragraph-Our-Services--description parrafotranslate  inactive"> We provide several services
+                    to ensure
+                    your
+                    business
+                    sucess.</p>
+            </div>
 
-       </div>
+            <div class="Paragraph-Our-Services--container">
+                <div class="Paragraph-Our-Services--other">
+                    <p class="Paragraph-Our-Services--title">International Services.</p>
+                    <span class="open">+</span>
 
-      <div class="Paragraph-Our-Services--container">
-        <div class="Paragraph-Our-Services--other">
-          <p class="Paragraph-Our-Services--title">International Tax Services.</p>
-          <span class="open">+</span>
-        </div>
-        <p class="Paragraph-Our-Services--description inactive">Services to your personal or business tax solutions.</p>
+                </div>
+                <p class="Paragraph-Our-Services--description parrafotranslate inactive">Consutancy and operational
+                    services for
+                    internationally
+                    expanding
+                    companies.</p>
 
-      </div>
+            </div>
 
-      <div class="Paragraph-Our-Services--container"> 
-        <div class="Paragraph-Our-Services--other">
-          <p class="Paragraph-Our-Services--title"> Delaware Registered Agent.</p>
-          <span class="open">+</span>
-        </div>
-        <p class="Paragraph-Our-Services--description inactive"> We provide the best Delaware Registered Agent service
-          with the
-          guaranteed
-          lowest annual Registered Agent Fee
-          in the industry.</p>
+            <div class="Paragraph-Our-Services--container">
+                <div class="Paragraph-Our-Services--other">
+                    <p class="Paragraph-Our-Services--title">Delaware Company Formation.</p>
+                    <span class="open">+</span>
+                </div>
+                <p class="Paragraph-Our-Services--description parrafotranslate inactive">Specialized company formation
+                    including
+                    insurance and
+                    business
+                    trusts.
+                </p>
 
-      </div>
+            </div>
 
-      <div class="Paragraph-Our-Services--container">
-        <div class="Paragraph-Our-Services--other">
-          <p class="Paragraph-Our-Services--title"> Other Services.</p>
-          <span class="open">+</span>
-        </div>
+            <div class="Paragraph-Our-Services--container">
+                <div class="Paragraph-Our-Services--other">
+                    <p class="Paragraph-Our-Services--title">International Tax Services.</p>
+                    <span class="open">+</span>
+                </div>
+                <p class="Paragraph-Our-Services--description parrafotranslate">Services to your personal or business
+                    tax
+                    solutions.</p>
 
-        <p class="Paragraph-Our-Services--description inactive ">Payroll, joint, venture, acquistions, consulting for
-          financing
-          your
-          international expansion.</p>
+            </div>
 
-      </div>
+            <div class="Paragraph-Our-Services--container">
+                <div class="Paragraph-Our-Services--other">
+                    <p class="Paragraph-Our-Services--title"> Delaware Registered Agent.</p>
+                    <span class="open">+</span>
+                </div>
+                <p class="Paragraph-Our-Services--description parrafotranslate inactive"> We provide the best Delaware
+                    Registered Agent
+                    service
+                    with the
+                    guaranteed
+                    lowest annual Registered Agent Fee
+                    in the industry.</p>
 
-    </section>  
-  </section> --->
+            </div>
+
+            <div class="Paragraph-Our-Services--container">
+                <div class="Paragraph-Our-Services--other">
+                    <p class="Paragraph-Our-Services--title"> Other Services.</p>
+                    <span class="open">+</span>
+                </div>
+
+                <p class="Paragraph-Our-Services--description parrafotranslate inactive">Payroll, joint, venture,
+                    acquistions,
+                    consulting for
+                    financing
+                    your
+                    international expansion.</p>
+
+            </div>
+
+        </section>
+
+    </section>
     <section class="Contact-Link-Home--Container">
         <section class="contacts-link opacityAnimation">
             <p class="title-link">Your must important connection</p>
@@ -262,18 +280,21 @@
 
 
 
-  <section class="Form-Contact--Container ">
-<!--     <div class="contenedor-De-Mensajes-gENERAL-animation  mensajesGenerales">
+    <section class="Form-Contact--Container inactive">
+        <!--     <div class="contenedor-De-Mensajes-gENERAL-animation  mensajesGenerales">
+  <section class="Form-Contact--Container inactive">
+     <div class="contenedor-De-Mensajes-gENERAL-animation  mensajesGenerales">
       <img src="https://cdn-icons-png.flaticon.com/256/75/75519.png" class="img-form-contact--MensajesX inactive img-form" alt="">
     </div>
     <img class="img-form-contact--Mensajes img-form-contact--Mensajes-off" src="https://cdn-icons-png.flaticon.com/512/20/20173.png" alt="">
     <img class="img-form-contact--Mensajes imgFormContactMensajesOn inactive" src="https://cdn-icons-png.flaticon.com/512/104/104710.png" alt="noentro"> -->
-    <form action="">
-    <section class="user-Data-Container">
-      <div>
-        <p>Your Name *</p>
-        <input class="input-text" type="text" name="firstName" id="firstName" autocomplete="given-name" >
-      </div>
+
+        <form action="">
+            <section class="user-Data-Container">
+                <div>
+                    <p>Your Name *</p>
+                    <input class="input-text" type="text" name="firstName" id="firstName" autocomplete="given-name">
+                </div>
 
                 <div>
                     <p>Email Address *</p>
@@ -311,6 +332,7 @@
             <a href="#">(+733)945-6601</a>
         </section>
     </section>
+
     <footer>
         <div class="Footer-Container-Text">
             <h3>We are to serve you...</h3>

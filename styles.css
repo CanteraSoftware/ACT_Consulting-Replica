@@ -4,7 +4,6 @@
   margin: 0;
 }
 
-
 :root {
   --bg-beige: #f4f0ec;
   --bg-contact_link: #222220;
@@ -14,11 +13,13 @@
   --subtitle-Font-Size: 3rem;
 }
 
-
 html {
   font-size: 62.5%;
   font-family: var(--FontFamily);
   color: var(--bg-contact_link);
+}
+body {
+  transition: all 1.5s ease;
 }
 
 /* navBar header */
@@ -31,13 +32,13 @@ html {
     width: 100%;
     height: 80px;
     justify-content: end;
-    
-    
  }
+
  .buttons-navbar.scrolled{
      background-position-y: 0%;
      transition: background-color 1.4s ease-in;
  }
+
  header nav{
      height: 70px;
  }
@@ -49,6 +50,8 @@ html {
      background: none;
      transition: .2s ease;
  }
+
+
  .bg-nav.scrolled{
     background-color: white ;
  }
@@ -63,9 +66,12 @@ html {
      cursor: pointer;
      transition: .2s ease;
  }
+
  .buttons-navbar a:hover{
      opacity: 1;
  }
+
+
  .buttons-navbar a.scrolled {
      color: black;
      opacity: 1;
@@ -75,11 +81,13 @@ html {
      opacity: .7;
  }
  /* fin navBar header */
+
 /* section contenedor header home*/
 .Home-Header--container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 180px;
 }
 
 /* section contenedor header home imagen*/
@@ -100,7 +108,6 @@ html {
   flex-direction: column;
   position: absolute;
   text-align: center;
-
 }
 
 /* section contenedor header home texto h1*/
@@ -219,18 +226,18 @@ html {
 .button-link:hover {
   background-color: white;
   color: #222220;
+  cursor: pointer;
 }
-
-/* Our Services */
-/* .Our-Services--container {
+/* Seccion Our Services*/
+.Our-Services--container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-} */
+  margin-bottom: 180px;
+} 
 
-/* seccion what we do */
-/* .Our-Services--container h1 {
+.Our-Services--container h1 {
   font-size: var(--subtitle-Font-Size);
 }
 
@@ -239,12 +246,15 @@ html {
 }
 
 .Paragraph-Our-Services--container {
+  height: 53px;
   border: 1px solid #6c6a6a4d;
   width: 530px;
   margin: 20px 0;
   display: flex;
+  overflow: hidden;
   align-items: center;
   flex-direction: column;
+  transition: all 0.3s ease;
 
 }
 
@@ -254,7 +264,8 @@ html {
   width: 530px;
   margin-top: 10px;
   align-items: center;
-  transition: all 0.5 ease;
+  transition: all ease .3s;
+
 }
 
 .Our-Services section {
@@ -265,11 +276,14 @@ html {
 .open {
   font-size: 3rem;
   margin-right: 20px;
-  transition: all 0.5s ease;
+  transition: all ease .3s;
+  transform: rotate(1deg);
+  cursor: pointer;
 }
 
-.open:hover {
-  transform: rotate(90deg);
+.closed {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
 }
 
 .Paragraph-Our-Services--title {
@@ -277,8 +291,12 @@ html {
   margin-left: 20px;
 }
 
-.inactive {
-  display: none;
+.parrafotranslate {
+  transform: translateY(4px);
+}
+
+.container-heigth {
+  height: 86px;
 }
 
 .Paragraph-Our-Services--description {
@@ -286,8 +304,8 @@ html {
   font-size: 1.3rem;
   margin-left: 20px;
   margin-bottom: 10px;
-}  */
-
+  transition: all ease .3s;
+}
 
 /* seccion what twe do */
 
@@ -370,7 +388,6 @@ html {
   margin: 10px auto 0 auto;
 }
 
-
 /*form*/
 
 .img-form-contact--Mensajes {
@@ -381,7 +398,6 @@ html {
 .Form-Contact--Container {
   margin: 0 auto;
   padding-left: 48px;
-  ;
   max-width: 690px;
   font-size: 1.4rem;
   font-weight: bold;
@@ -412,7 +428,6 @@ html {
   outline: none;
   border-radius: 3px;
   border: 1px solid var(--hover-ligth-gray);
-
 }
 
 .message-Container textarea {
@@ -441,7 +456,7 @@ html {
   border: none;
   margin: 20px auto;
   cursor: pointer;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .message-Container button:hover {
@@ -458,7 +473,6 @@ html {
   padding: 5px;
   background: #f4f0ec;
   box-shadow: 6px 7px 50px -35px rgba(0, 0, 0, 0.75);
-
 }
 
 .img-form-contact--MensajesX {
@@ -489,8 +503,6 @@ html {
   font-size: 1.3rem;
   text-align: center;
   margin-bottom: 150px;
-
-
 }
 
 .Info-Contact--Container section {
@@ -525,7 +537,6 @@ html {
 .Info-Contact--Container section p {
   margin-bottom: 5px;
 }
-
 
 /* Details container and children */
 
@@ -607,8 +618,7 @@ footer {
   position: relative;
   display: flex;
   margin-bottom: 60px;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 /* footer icons */
@@ -621,9 +631,7 @@ footer span img {
 }
 
 footer .Footer-Container-Text {
-  position: absolute;
   font-size: 1.4rem;
-  left: 10px;
   width: 380px;
 }
 
@@ -642,6 +650,7 @@ footer .Footer-Container-Sections {
   justify-content: center;
   font-size: 1.6rem;
   width: 100px;
+  margin-right: 50px ;
 }
 
 footer .Footer-Container-Sections div {
@@ -655,10 +664,8 @@ footer .Footer-Container-Sections div p {
 }
 
 footer .Footer-Container-Contacts {
-  position: absolute;
   font-size: 1.6rem;
   width: 150px;
-  right: 80px;
 }
 
 footer .Footer-Container-Contacts div {
@@ -693,7 +700,6 @@ footer a {
   font-size: 1.3rem;
 }
 
-
 /* animations */
 
 .LadderAnimation {
@@ -701,11 +707,16 @@ footer a {
   transform: translate(0px, 70px);
 }
 
+body {
+  transition: all 1.5s ease;
+}
+
 .opacityAnimation {
   opacity: 0;
 }
 
 /* inactive */
+
 .inactive {
   display: none;
 }
