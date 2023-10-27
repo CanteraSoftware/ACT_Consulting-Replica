@@ -1,84 +1,98 @@
+//opacity body
+const body = document.querySelector("body");
+
+let releading = 1;
+function opacityLoad() {
+  if (releading >= 1) {
+    body.classList.remove("opacityAnimation");
+    releading--;
+  }
+}
+
+window.addEventListener("load", opacityLoad);
+
 /* click el button contact now */
-const buttonContactNow = document.querySelector(".button-link")
+const buttonContactNow = document.querySelector(".button-link");
 /*click en el nav contact */
-const contactNav = document.querySelector('#navBar--contacts')
-const navBarHome = document.querySelector("#navBar--home")
-const aboutUs = document.querySelector(".about-us")
-const personalAttentionContainer = document.querySelector(".Personal-Attention--Container")
-const contactLinkHomeContainer = document.querySelector(".Contact-Link-Home--Container")
-const footer = document.querySelector("footer")
+const contactNav = document.querySelector("#navBar--contacts");
+const navBarHome = document.querySelector("#navBar--home");
+navBarHome.addEventListener("click", opacityLoad);
+const aboutUs = document.querySelector(".about-us");
+const personalAttentionContainer = document.querySelector(
+  ".Personal-Attention--Container"
+);
+const contactLinkHomeContainer = document.querySelector(
+  ".Contact-Link-Home--Container"
+);
+const footer = document.querySelector("footer");
 const homeHeaderImagen = document.querySelector(".Home-Header--imagen");
-const homeHeaderText = document.querySelector(".Home-Header--text h1")
-const homeHeaderParrafo = document.querySelector(".Home-Header--text p")
-buttonContactNow.addEventListener("click", viewContact)
-contactNav.addEventListener("click", viewContact)
-navBarHome.addEventListener("click", viewHome)
-const ourServiceContainer = document.querySelector(".Our-Services--container")
+const homeHeaderText = document.querySelector(".Home-Header--text h1");
+const homeHeaderParrafo = document.querySelector(".Home-Header--text p");
+buttonContactNow.addEventListener("click", viewContact);
+contactNav.addEventListener("click", viewContact);
+navBarHome.addEventListener("click", viewHome);
+const ourServiceContainer = document.querySelector(".Our-Services--container");
 const divServicesContainer = document.querySelectorAll(
-  ".Paragraph-Our-Services--container");
+  ".Paragraph-Our-Services--container"
+);
 const icons = document.querySelectorAll(".open");
-const paragraphDescription = document.querySelectorAll(".Paragraph-Our-Services--description");
+const paragraphDescription = document.querySelectorAll(
+  ".Paragraph-Our-Services--description"
+);
 
 function toggleDescription(index) {
   divServicesContainer.forEach(function (paragraph, i) {
-
     if (i === index) {
-
       paragraph.classList.toggle("container-heigth");
-
     } else {
       paragraph.classList.remove("container-heigth");
     }
-
-  }
-
-  )
+  });
   icons.forEach(function (icono, i) {
-
     if (i === index) {
       if (!icono.classList.contains("closed")) {
         icono.classList.add("closed");
-        icono.textContent = "-"
-
+        icono.textContent = "-";
       } else {
         icono.classList.remove("closed");
-        icono.textContent = "+"
+        icono.textContent = "+";
       }
     } else {
-
       if (icono.classList.contains("closed")) {
         icono.classList.remove("closed");
-        icono.textContent = "+"
+        icono.textContent = "+";
       }
-
     }
-  }
-
-  )
-    ;
+  });
+  paragraphDescription.forEach(function (parrafo, i) {
+    if (i === index) {
+      parrafo.classList.toggle("inactive");
+    } else {
+      parrafo.classList.add("inactive");
+    }
+  });
 }
 
 icons.forEach(function (icon, index) {
   icon.addEventListener("click", function () {
     toggleDescription(index);
-
   });
-})
+});
 
+const button = document.querySelectorAll(".buttons-navbar li a");
+const navbar = document.querySelector(".bg-nav");
 
-const button = document.querySelectorAll('.buttons-navbar li a');
-const navbar = document.querySelector('.bg-nav');
-
-document.addEventListener('scroll', () => {
+document.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
-    navbar.style.top = 0
-    navbar.classList.add('scrolled');
-    button.forEach(item => item.classList.add('scrolled'))
+    navbar.style.top = 0;
+    navbar.classList.add("scrolled");
+    button.forEach((item) => item.classList.add("scrolled"));
   } else {
-    navbar.classList.remove('scrolled')
-    button.forEach(item => item.classList.remove('scrolled'))
+    navbar.classList.remove("scrolled");
+    button.forEach((item) => item.classList.remove("scrolled"));
   }
-})
+});
+
 //scroll top
 //animacion de what we are
 const WhoWeAreContainer = document.querySelector(".Who-We-Are--Container");
@@ -101,29 +115,26 @@ function scrollanimacionWhoWeAre() {
 const contactsLinkes = document.querySelector(".Contact-Link-Home--Container");
 const contactsLink = document.querySelector(".contacts-link");
 
-window.addEventListener("scroll", scrollAnimationLinkConc)
+window.addEventListener("scroll", scrollAnimationLinkConc);
 
 function scrollAnimationLinkConc() {
   if (elementIdentifier(contactsLinkes)) {
     setTimeout(() => {
       contactsLink.classList.remove("opacityAnimation");
     }, 500);
-
   }
 }
-
-
 //animacion de what we do
 const whatWeDoSection = document.querySelector(".what-we-do--section");
 const titleWhatWeDo = document.querySelector(".titleWhat-we-do");
 const whitParrafo = document.querySelector(".whit-parrafo");
 const ulListChequed = document.querySelectorAll(".ul-list-chequed");
-const whatWeDoSectionContainerul = document.querySelector(".what-we-do--section-Container-ul");
-
+const whatWeDoSectionContainerul = document.querySelector(
+  ".what-we-do--section-Container-ul"
+);
 
 window.addEventListener("scroll", scrollAnimationwhatWeDo);
 window.addEventListener("scroll", scrollAnimationwhatWeDoPT);
-
 
 function titleParrafoAnimation() {
   titleWhatWeDo.classList.remove("LadderAnimation");
@@ -131,16 +142,18 @@ function titleParrafoAnimation() {
 }
 
 function scrollAnimationwhatWeDoPT() {
-  if (elementIdentifier(whatWeDoSection)) { //que hace si esta en la pantalla
+  if (elementIdentifier(whatWeDoSection)) {
+    //que hace si esta en la pantalla
     titleParrafoAnimation();
-  }/* else {//que hace si no esta en la pantalla
+  } /* else {//que hace si no esta en la pantalla
     
   } */
 }
 function scrollAnimationwhatWeDo() {
-  if (elementIdentifier(whatWeDoSectionContainerul)) { //que hace si esta en la pantalla
+  if (elementIdentifier(whatWeDoSectionContainerul)) {
+    //que hace si esta en la pantalla
     ladderSections(ulListChequed);
-  }/* else {//que hace si no esta en la pantalla
+  } /* else {//que hace si no esta en la pantalla
     console.log("hola mundo");
   } */
 }
@@ -160,8 +173,7 @@ imgFormContactMensajesOn.addEventListener("click", openMensajes); */
 textareaMessage.addEventListener("input", caracteresContente);
 inputTextName.addEventListener("input", nameValidator);
 inputEmail.addEventListener("input", emailValidator);
-submitButton.addEventListener("click", submitForm, false)
-
+submitButton.addEventListener("click", submitForm, false);
 
 /* Contenedores de textos de Error */
 const inputTextError = document.createElement("div");
@@ -170,7 +182,7 @@ position: absolute;
 top: 1px;
 left: 130px;
 color: red;
-`
+`;
 
 const inputTextEmail = document.createElement("div");
 inputTextEmail.style = `
@@ -178,7 +190,7 @@ position: absolute;
 top: 1px;
 left: 480px;
 color: red;
-`
+`;
 
 const alertMessage = document.createElement("div");
 alertMessage.style = `
@@ -186,40 +198,38 @@ position: absolute;
 bottom: 63px;
 left: 50px;
 color: red;
-`
+`;
 
 const contadorDeCaracteres = document.createElement("div");
 contadorDeCaracteres.style = `
 position: absolute;
 bottom: 63px;
 right: 4px;
-`
-
-
+`;
 
 //Funciones de Formulario
 function caracteresContente() {
-  let caracteresLength = textareaMessage.value.length
+  let caracteresLength = textareaMessage.value.length;
 
   if (!caracteresLength) {
-    alertMessage.innerText = "You must write something."
+    alertMessage.innerText = "You must write something.";
     textareaMessage.style = `
     border-bottom: 2px solid red;
     border-right: 2px solid red;
-    `
+    `;
   } else if (caracteresLength === 500) {
-    alertMessage.innerText = "Your message can't have more than 500 characters."
+    alertMessage.innerText =
+      "Your message can't have more than 500 characters.";
     textareaMessage.style = `
     border-bottom: 2px solid red;
     border-right: 2px solid red;
-    `
+    `;
   } else {
-    alertMessage.innerText = ""
+    alertMessage.innerText = "";
     textareaMessage.style = `
     border:1px solid var(--hover-ligth-gray) ;
-    `
+    `;
   }
-
 
   if (caracteresLength > 0) {
     contadorDeCaracteres.innerText = caracteresLength + "-500";
@@ -231,24 +241,24 @@ function caracteresContente() {
 
 function nameValidator() {
   if (/[.*+?^${}()|[\]\\0-9-,¨´"]/.test(inputTextName.value)) {
-    inputTextError.innerText = "You can't use numbers or symbols."
+    inputTextError.innerText = "You can't use numbers or symbols.";
     inputTextName.style = `
     border-bottom: 2px solid red;
-    border-left: 2px solid red;`
+    border-left: 2px solid red;`;
     FormContactContainer.append(inputTextError);
   } else if (inputTextName.value.length === 0) {
-    inputTextError.innerText = "You must write something."
+    inputTextError.innerText = "You must write something.";
     inputTextName.style = `
     border-bottom: 2px solid red;
     border-right: 2px solid red;
-    `
+    `;
     FormContactContainer.append(inputTextError);
   } else {
-    inputTextError.innerText = ""
+    inputTextError.innerText = "";
     inputTextName.style = `
     border:1px solid var(--hover-ligth-gray) ;
-    `
-  };
+    `;
+  }
 }
 
 function emailValidator() {
@@ -256,47 +266,46 @@ function emailValidator() {
   let firstEmail = email[0];
   let secondEmail = email[1];
 
-
   if (/[.*+?¿!#%=|°~^${}()-,´"|[\]\\]/.test(firstEmail)) {
-    inputTextEmail.innerText = "You can't use symbols."
+    inputTextEmail.innerText = "You can't use symbols.";
     inputEmail.style = `
       border-bottom: 2px solid red;
-      border-left: 2px solid red;`
+      border-left: 2px solid red;`;
     FormContactContainer.appendChild(inputTextEmail);
   } else if (/[0-9*+?!#%=|°~^${}()-,´"|[\]\\]/.test(secondEmail)) {
-    inputTextEmail.innerText = "You can't use symbols."
+    inputTextEmail.innerText = "You can't use symbols.";
     inputEmail.style = `
     border-bottom: 2px solid red;
     border-left: 2px solid red;
-    `
+    `;
     FormContactContainer.appendChild(inputTextEmail);
   } else if (inputEmail.value.length === 0) {
-    inputTextEmail.innerText = "You must write something."
+    inputTextEmail.innerText = "You must write something.";
     inputEmail.style = `
       border-bottom: 2px solid red;
       border-right: 2px solid red;
-      `
+      `;
     FormContactContainer.append(inputTextEmail);
   } else {
-    inputTextEmail.innerText = ""
+    inputTextEmail.innerText = "";
     inputEmail.style = `
       border:1px solid var(--hover-ligth-gray) ;
-      `
-  };
+      `;
+  }
 
   if (email.length >= 3) {
-    inputTextEmail.innerText = "Invalid email"
+    inputTextEmail.innerText = "Invalid email";
     inputEmail.style = `
     border-bottom: 2px solid red;
     border-left: 2px solid red;
-    `
+    `;
   }
 }
 
 function submitForm(event) {
-  let email = inputEmail.value
-  let name = inputTextName.value
-  let textarea = textareaMessage.value
+  let email = inputEmail.value;
+  let name = inputTextName.value;
+  let textarea = textareaMessage.value;
 
   if (!email || !name || !textarea) {
     event.preventDefault();
@@ -310,7 +319,6 @@ function submitForm(event) {
     inputEmail.value = "";
   }
 }
-
 
 /* const contenedorDeMensajesgENERAL = document.querySelector(".mensajesGenerales");
 function nuevoMensaje() {
@@ -357,8 +365,6 @@ contenedorDeMensajesgENERAL.append(contenedorDeMensajes);
 contenedorDeMensajes.append(contenedorDeMensajesName,contenedorDeMensajesMensaje,contenedorDeMensajesGmail);
 } */
 
-
-
 //animacion de info contact
 const InfoContactContainer = document.querySelector(".Info-Contact--Container");
 const sectionDesplace = document.querySelectorAll(".section-desplace");
@@ -366,32 +372,34 @@ const sectionDesplace = document.querySelectorAll(".section-desplace");
 window.addEventListener("scroll", scrollAnimationInfoContainer);
 
 function scrollAnimationInfoContainer() {
-  if (elementIdentifier(InfoContactContainer)) { //que hace si esta en la pantalla
+  if (elementIdentifier(InfoContactContainer)) {
+    //que hace si esta en la pantalla
     ladderSections(sectionDesplace);
-  } else {//que hace si no esta en la pantalla
+  } else {
+    //que hace si no esta en la pantalla
     console.log("hola mundo");
   }
 }
 
-
-
 //funciones generales de animacion
 
-function elementIdentifier(elemento) { //esta funcion entrega si esta o no en la pantalla.
+function elementIdentifier(elemento) {
+  //esta funcion entrega si esta o no en la pantalla.
 
   let longi = elemento.getBoundingClientRect();
 
   return (
-    longi.top < (window.innerHeight || document.documentElement.clientHeight) && longi.bottom > 0
-  )
-
-};
+    longi.top < (window.innerHeight || document.documentElement.clientHeight) &&
+    longi.bottom > 0
+  );
+}
 
 /* animacion de escalera */
+
 function ladderSections(contenedores) {
   let time = 500;
   for (let i = 0; i < contenedores.length; i++) {
-    time = + time + 100
+    time = +time + 100;
     const element = contenedores[i];
     setTimeout(() => {
       element.classList.remove("LadderAnimation");
@@ -399,62 +407,43 @@ function ladderSections(contenedores) {
   }
 }
 
-
-
 function viewContact() {
-  whatWeDoSection.classList.add("inactive")
-  WhoWeAreContainer.classList.add("inactive")
-  aboutUs.classList.add("inactive")
-  personalAttentionContainer.classList.add("inactive")
-  ourServiceContainer.classList.add("inactive")
-  contactLinkHomeContainer.classList.add("inactive")
-  FormContactContainer.classList.remove("inactive")
-  InfoContactContainer.classList.remove("inactive")
-  homeHeaderImagen.style =
-    `background: url("/public/assets/img/contact-header.jpg");
+  whatWeDoSection.classList.add("inactive");
+  WhoWeAreContainer.classList.add("inactive");
+  aboutUs.classList.add("inactive");
+  personalAttentionContainer.classList.add("inactive");
+  ourServiceContainer.classList.add("inactive");
+  contactLinkHomeContainer.classList.add("inactive");
+  FormContactContainer.classList.remove("inactive");
+  InfoContactContainer.classList.remove("inactive");
+  homeHeaderImagen.style = `background: url("/public/assets/img/contact-header.jpg");
     background-size: cover;
-    clip-path: none;`
-  homeHeaderText.innerText = "We are here to help you."
+    clip-path: none;
+    `;
+  homeHeaderText.innerText = "We are here to help you.";
   homeHeaderParrafo.innerText = `ACT Consulting Inc.
-  Your must important accountant.`
-  homeHeaderParrafo.style =
-    `font-size: 1.7rem
-  `
+  Your must important accountant.`;
+  homeHeaderParrafo.style = `font-size: 1.7rem
+  `;
 }
 
 function viewHome() {
-  whatWeDoSection.classList.remove("inactive")
-  WhoWeAreContainer.classList.remove("inactive")
-  aboutUs.classList.remove("inactive")
-  personalAttentionContainer.classList.remove("inactive")
-  ourServiceContainer.classList.remove("inactive")
-  contactLinkHomeContainer.classList.remove("inactive")
-  footer.classList.remove("inactive")
-  FormContactContainer.classList.add("inactive")
-  InfoContactContainer.classList.add("inactive")
-  homeHeaderImagen.style =
-    ` background: url("/public/assets/img/about-header.jpg");
+  whatWeDoSection.classList.remove("inactive");
+  WhoWeAreContainer.classList.remove("inactive");
+  aboutUs.classList.remove("inactive");
+  personalAttentionContainer.classList.remove("inactive");
+  ourServiceContainer.classList.remove("inactive");
+  contactLinkHomeContainer.classList.remove("inactive");
+  footer.classList.remove("inactive");
+  FormContactContainer.classList.add("inactive");
+  InfoContactContainer.classList.add("inactive");
+  homeHeaderImagen.style = ` background: url("/public/assets/img/about-header.jpg");
       background-size: cover;
       clip-path: ellipse(105% 76% at 50% 21%)
       background-repeat: no-repeat;
       background-position: center;
-    `
+    `;
   homeHeaderText.innerText = `Personal & Small
-Business`
-  homeHeaderParrafo.innerText = `Tax & Bookkeping Services.`
+Business`;
+  homeHeaderParrafo.innerText = `Tax & Bookkeping Services.`;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

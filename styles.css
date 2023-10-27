@@ -4,7 +4,6 @@
   margin: 0;
 }
 
-
 :root {
   --bg-beige: #f4f0ec;
   --bg-contact_link: #222220;
@@ -14,11 +13,13 @@
   --subtitle-Font-Size: 3rem;
 }
 
-
 html {
   font-size: 62.5%;
   font-family: var(--FontFamily);
   color: var(--bg-contact_link);
+}
+body {
+  transition: all 1.5s ease;
 }
 
 /* navBar header */
@@ -31,8 +32,6 @@ html {
   width: 100%;
   height: 80px;
   justify-content: end;
-
-
 }
 
 .buttons-navbar.scrolled {
@@ -50,7 +49,7 @@ header nav {
   position: fixed;
   top: -80px;
   background: none;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .bg-nav.scrolled {
@@ -66,7 +65,7 @@ header nav {
   background: none;
   border: none;
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .buttons-navbar a:hover {
@@ -76,11 +75,11 @@ header nav {
 .buttons-navbar a.scrolled {
   color: black;
   opacity: 1;
-  transition: color .2s ease-in;
+  transition: color 0.2s ease-in;
 }
 
 .buttons-navbar a.scrolled:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 /* fin navBar header */
@@ -111,7 +110,6 @@ header nav {
   flex-direction: column;
   position: absolute;
   text-align: center;
-
 }
 
 /* section contenedor header home texto h1*/
@@ -231,6 +229,7 @@ header nav {
 .button-link:hover {
   background-color: white;
   color: #222220;
+  cursor: pointer;
 }
 
 .Our-Services--container {
@@ -259,7 +258,7 @@ header nav {
   overflow: hidden;
   align-items: center;
   flex-direction: column;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 
 }
 
@@ -269,7 +268,7 @@ header nav {
   width: 530px;
   margin-top: 10px;
   align-items: center;
-  transition: all ease .5s;
+  transition: all ease .3s;
 
 }
 
@@ -281,14 +280,14 @@ header nav {
 .open {
   font-size: 3rem;
   margin-right: 20px;
-  transition: all ease .5s;
+  transition: all ease .3s;
   transform: rotate(1deg);
   cursor: pointer;
 }
 
 .closed {
   transform: rotate(180deg);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .Paragraph-Our-Services--title {
@@ -309,7 +308,7 @@ header nav {
   font-size: 1.3rem;
   margin-left: 20px;
   margin-bottom: 10px;
-  transition: all ease .5s;
+  transition: all ease .3s;
 }
 
 /* seccion what twe do */
@@ -393,7 +392,6 @@ header nav {
   margin: 10px auto 0 auto;
 }
 
-
 /*form*/
 
 .img-form-contact--Mensajes {
@@ -404,7 +402,6 @@ header nav {
 .Form-Contact--Container {
   margin: 0 auto;
   padding-left: 48px;
-  ;
   max-width: 690px;
   font-size: 1.4rem;
   font-weight: bold;
@@ -435,7 +432,6 @@ header nav {
   outline: none;
   border-radius: 3px;
   border: 1px solid var(--hover-ligth-gray);
-
 }
 
 .message-Container textarea {
@@ -464,7 +460,7 @@ header nav {
   border: none;
   margin: 20px auto;
   cursor: pointer;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .message-Container button:hover {
@@ -481,7 +477,6 @@ header nav {
   padding: 5px;
   background: #f4f0ec;
   box-shadow: 6px 7px 50px -35px rgba(0, 0, 0, 0.75);
-
 }
 
 .img-form-contact--MensajesX {
@@ -512,8 +507,6 @@ header nav {
   font-size: 1.3rem;
   text-align: center;
   margin-bottom: 150px;
-
-
 }
 
 .Info-Contact--Container section {
@@ -548,7 +541,6 @@ header nav {
 .Info-Contact--Container section p {
   margin-bottom: 5px;
 }
-
 
 /* Details container and children */
 
@@ -715,7 +707,6 @@ footer a {
   color: var(--bg-contact_link);
   font-size: 1.3rem;
 }
-
 
 /* animations */
 
