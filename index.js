@@ -1,7 +1,64 @@
-//opacity body
+//nodos
 const body = document.querySelector("body");
-
+const buttonContactNow = document.querySelector(".button-link");
 const contactNav = document.querySelector("#navBar--contacts");
+const navBarHome = document.querySelector("#navBar--home");
+const aboutUs = document.querySelector(".about-us");
+const footer = document.querySelector("footer");
+const homeHeaderImagen = document.querySelector(".Home-Header--imagen");
+const homeHeaderText = document.querySelector(".Home-Header--text h1");
+const homeHeaderParrafo = document.querySelector(".Home-Header--text p");
+const ourServiceContainer = document.querySelector(".Our-Services--container");
+const ourServiceTittle = document.querySelector(".Our-Services--tittle ");
+const ourServiceTittleSecond = document.querySelector(
+  ".Our-Services--secondTittle"
+);
+const divServicesContainer = document.querySelectorAll(
+  ".Paragraph-Our-Services--container"
+);
+const ourServicesSection = document.querySelector(".Our-services--section");
+const icons = document.querySelectorAll(".open");
+const button = document.querySelectorAll(".buttons-navbar li a");
+const navbar = document.querySelector(".bg-nav");
+const ourService = document.querySelector("#Our-Service");
+const Home = document.querySelector("#Home");
+const About = document.querySelector("#About-us");
+const WhoWeAreContainer = document.querySelector(".Who-We-Are--Container");
+const WhoWeAreDescription = document.querySelector(".Who-We-Are--Description");
+const WhoWeAreDetails = document.querySelector(".Who-We-Are--Details");
+const contactsLinkes = document.querySelector(".Contact-Link-Home--Container");
+const contactsLink = document.querySelector(".contacts-link");
+const whatWeDoSection = document.querySelector(".what-we-do--section");
+const titleWhatWeDo = document.querySelector(".titleWhat-we-do");
+const whitParrafo = document.querySelector(".whit-parrafo");
+const ulListChequed = document.querySelectorAll(".ul-list-chequed");
+const FormContactContainer = document.querySelector(".Form-Contact--Container");
+const inputTextName = document.querySelector(".input-text");
+const inputEmail = document.querySelector(".input-Email");
+const textareaMessage = document.querySelector("#textarea-message");
+const submitButton = document.querySelector(".button-SendMessage");
+const inputTextError = document.createElement("div");
+const inputTextEmail = document.createElement("div");
+const alertMessage = document.createElement("div");
+const contadorDeCaracteres = document.createElement("div");
+const InfoContactContainer = document.querySelector(".Info-Contact--Container");
+const sectionDesplace = document.querySelectorAll(".section-desplace");
+const personalAttentionContainer = document.querySelector(
+  ".Personal-Attention--Container"
+);
+const contactLinkHomeContainer = document.querySelector(
+  ".Contact-Link-Home--Container"
+);
+
+const paragraphDescription = document.querySelectorAll(
+  ".Paragraph-Our-Services--description"
+);
+const whatWeDoSectionContainerul = document.querySelector(
+  ".what-we-do--section-Container-ul"
+);
+
+//opacity body
+
 let releading = 1;
 
 function opacityLoadClick() {
@@ -35,42 +92,24 @@ contactNav.addEventListener("click", opacityLoadClick);
 window.addEventListener("load", opacityLoadClick);
 
 /* click el button contact now */
-const buttonContactNow = document.querySelector(".button-link");
+
 buttonContactNow.addEventListener("click", () => {
   opacityLoadClick();
   window.scrollTo(top);
 });
 
 /*click en el nav contact */
-const navBarHome = document.querySelector("#navBar--home");
+
 navBarHome.addEventListener("click", opacityLoadClick);
-const aboutUs = document.querySelector(".about-us");
-const personalAttentionContainer = document.querySelector(
-  ".Personal-Attention--Container"
-);
-const contactLinkHomeContainer = document.querySelector(
-  ".Contact-Link-Home--Container"
-);
-const footer = document.querySelector("footer");
-const homeHeaderImagen = document.querySelector(".Home-Header--imagen");
-const homeHeaderText = document.querySelector(".Home-Header--text h1");
-const homeHeaderParrafo = document.querySelector(".Home-Header--text p");
 buttonContactNow.addEventListener("click", viewContact);
 contactNav.addEventListener("click", viewContact);
 navBarHome.addEventListener("click", viewHome);
-const ourServiceContainer = document.querySelector(".Our-Services--container");
-const divServicesContainer = document.querySelectorAll(
-  ".Paragraph-Our-Services--container"
-);
-const icons = document.querySelectorAll(".open");
-const paragraphDescription = document.querySelectorAll(
-  ".Paragraph-Our-Services--description"
-);
 
+// funcion para desplegar los Our Services
 function toggleDescription(index) {
   divServicesContainer.forEach(function (paragraph, i) {
     if (i === index) {
-      paragraph.classList.toggle("container-heigth");
+      paragraph.classList.toggle("container-heigth"); // animacion para que suba y baje el parrafo
     } else {
       paragraph.classList.remove("container-heigth");
     }
@@ -78,6 +117,7 @@ function toggleDescription(index) {
   icons.forEach(function (icono, i) {
     if (i === index) {
       if (!icono.classList.contains("closed")) {
+        //itera por cada icono en caso que se abra cambia el icono
         icono.classList.add("closed");
         icono.textContent = "-";
       } else {
@@ -101,13 +141,12 @@ function toggleDescription(index) {
 }
 
 icons.forEach(function (icon, index) {
+  //l clickear los iconos se abra o cierra el contenedor
   icon.addEventListener("click", function () {
     toggleDescription(index);
   });
 });
-
-const button = document.querySelectorAll(".buttons-navbar li a");
-const navbar = document.querySelector(".bg-nav");
+/* navBar */
 
 document.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
@@ -119,12 +158,20 @@ document.addEventListener("scroll", () => {
     button.forEach((item) => item.classList.remove("scrolled"));
   }
 });
+//scroll top
 
+/*redireccion de secciones*/
+function scrollService(container) {
+  opacityLoadClick();
+  viewHome();
+  container.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "nearest",
+  });
+}
 //scroll top
 //animacion de what we are
-const WhoWeAreContainer = document.querySelector(".Who-We-Are--Container");
-const WhoWeAreDescription = document.querySelector(".Who-We-Are--Description");
-const WhoWeAreDetails = document.querySelector(".Who-We-Are--Details");
 
 window.addEventListener("scroll", scrollanimacionWhoWeAre);
 
@@ -136,11 +183,27 @@ function scrollanimacionWhoWeAre() {
     }, 400);
   }
 }
+//animacion para OurServices
+
+window.addEventListener("scroll", scrollAnimationOurServices);
+
+function animationOurServices(contenedor) {
+  contenedor.classList.remove("LadderAnimation");
+}
+
+function scrollAnimationOurServices() {
+  if (elementIdentifier(ourServiceTittle)) {
+    animationOurServices(ourServiceTittle);
+    animationOurServices(ourServiceTittleSecond);
+  }
+
+  if (elementIdentifier(ourServicesSection)) {
+    animationOurServices(ourServicesSection);
+  }
+}
+window.addEventListener("scroll", scrollAnimationOurServices);
 
 //animacion de link contac
-
-const contactsLinkes = document.querySelector(".Contact-Link-Home--Container");
-const contactsLink = document.querySelector(".contacts-link");
 
 window.addEventListener("scroll", scrollAnimationLinkConc);
 
@@ -152,13 +215,6 @@ function scrollAnimationLinkConc() {
   }
 }
 //animacion de what we do
-const whatWeDoSection = document.querySelector(".what-we-do--section");
-const titleWhatWeDo = document.querySelector(".titleWhat-we-do");
-const whitParrafo = document.querySelector(".whit-parrafo");
-const ulListChequed = document.querySelectorAll(".ul-list-chequed");
-const whatWeDoSectionContainerul = document.querySelector(
-  ".what-we-do--section-Container-ul"
-);
 
 window.addEventListener("scroll", scrollAnimationwhatWeDo);
 window.addEventListener("scroll", scrollAnimationwhatWeDoPT);
@@ -186,11 +242,6 @@ function scrollAnimationwhatWeDo() {
 }
 
 //form
-const FormContactContainer = document.querySelector(".Form-Contact--Container");
-const inputTextName = document.querySelector(".input-text");
-const inputEmail = document.querySelector(".input-Email");
-const textareaMessage = document.querySelector("#textarea-message");
-const submitButton = document.querySelector(".button-SendMessage");
 /* const imgFormContactMensajes = document.querySelector(".img-form-contact--Mensajes-off");
 const imgformX = document.querySelector(".img-form");
 const imgFormContactMensajesOn = document.querySelector(".imgFormContactMensajesOn"); */
@@ -203,7 +254,6 @@ inputEmail.addEventListener("input", emailValidator);
 submitButton.addEventListener("click", submitForm, false);
 
 /* Contenedores de textos de Error */
-const inputTextError = document.createElement("div");
 inputTextError.style = `
 position: absolute;
 top: 1px;
@@ -211,7 +261,6 @@ left: 130px;
 color: red;
 `;
 
-const inputTextEmail = document.createElement("div");
 inputTextEmail.style = `
 position: absolute;
 top: 1px;
@@ -219,7 +268,6 @@ left: 480px;
 color: red;
 `;
 
-const alertMessage = document.createElement("div");
 alertMessage.style = `
 position: absolute;
 bottom: 63px;
@@ -227,7 +275,6 @@ left: 50px;
 color: red;
 `;
 
-const contadorDeCaracteres = document.createElement("div");
 contadorDeCaracteres.style = `
 position: absolute;
 bottom: 63px;
@@ -393,8 +440,6 @@ contenedorDeMensajes.append(contenedorDeMensajesName,contenedorDeMensajesMensaje
 } */
 
 //animacion de info contact
-const InfoContactContainer = document.querySelector(".Info-Contact--Container");
-const sectionDesplace = document.querySelectorAll(".section-desplace");
 
 window.addEventListener("scroll", scrollAnimationInfoContainer);
 
@@ -433,6 +478,10 @@ function ladderSections(contenedores) {
     }, time);
   }
 }
+/* Funciones para cambiar las vistas Home y contact cambiando los estilos del Header*/
+buttonContactNow.addEventListener("click", viewContact);
+contactNav.addEventListener("click", viewContact);
+navBarHome.addEventListener("click", viewHome);
 
 function viewContact() {
   whatWeDoSection.classList.add("inactive");

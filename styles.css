@@ -40,12 +40,12 @@ html {
 }
 
 header nav {
-  height: 80px;
+  height: 70px;
 }
 
 .bg-nav {
   width: 100%;
-  height: 80px;
+  height: 70px;
   position: fixed;
   top: -80px;
   background: none;
@@ -58,7 +58,7 @@ header nav {
 
 .buttons-navbar a {
   color: white;
-  opacity: 1;
+  opacity: 0.5;
   text-decoration: none;
   margin: 0 10px;
   font-size: 1.4rem;
@@ -232,6 +232,7 @@ header nav {
   cursor: pointer;
 }
 
+/* Seccion Our Services*/
 .Our-Services--container {
   display: flex;
   flex-direction: column;
@@ -240,13 +241,15 @@ header nav {
   margin-bottom: 180px;
 }
 
-/* Seccion Our Services*/
 .Our-Services--container h1 {
   font-size: var(--subtitle-Font-Size);
+  transition: all 0.5s ease;
 }
 
-.Our-Services--title {
+.Our-Services--secondTittle {
   font-size: 1.5rem;
+  margin-left: 20px;
+  transition: all 0.5s ease;
 }
 
 .Paragraph-Our-Services--container {
@@ -258,7 +261,7 @@ header nav {
   overflow: hidden;
   align-items: center;
   flex-direction: column;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .Paragraph-Our-Services--other {
@@ -267,10 +270,12 @@ header nav {
   width: 530px;
   margin-top: 10px;
   align-items: center;
-  transition: all ease 0.5s;
+  transition: all ease 0.3s;
 }
 
-.Our-Services section {
+.Our-services--section {
+  transition: all 0.5s ease;
+  margin-top: 20px;
   margin-left: 20px;
   flex-direction: column;
 }
@@ -278,14 +283,14 @@ header nav {
 .open {
   font-size: 3rem;
   margin-right: 20px;
-  transition: all ease 0.5s;
+  transition: all ease 0.3s;
   transform: rotate(1deg);
   cursor: pointer;
 }
 
 .closed {
   transform: rotate(180deg);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .Paragraph-Our-Services--title {
@@ -306,7 +311,7 @@ header nav {
   font-size: 1.3rem;
   margin-left: 20px;
   margin-bottom: 10px;
-  transition: all ease 0.5s;
+  transition: all ease 0.3s;
 }
 
 /* seccion what twe do */
@@ -620,8 +625,7 @@ footer {
   position: relative;
   display: flex;
   margin-bottom: 60px;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 /* footer icons */
@@ -634,9 +638,7 @@ footer span img {
 }
 
 footer .Footer-Container-Text {
-  position: absolute;
   font-size: 1.4rem;
-  left: 10px;
   width: 380px;
 }
 
@@ -655,6 +657,7 @@ footer .Footer-Container-Sections {
   justify-content: center;
   font-size: 1.6rem;
   width: 100px;
+  margin-right: 50px;
 }
 
 footer .Footer-Container-Sections div {
@@ -668,10 +671,8 @@ footer .Footer-Container-Sections div p {
 }
 
 footer .Footer-Container-Contacts {
-  position: absolute;
   font-size: 1.6rem;
   width: 150px;
-  right: 80px;
 }
 
 footer .Footer-Container-Contacts div {
