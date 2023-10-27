@@ -45,7 +45,7 @@ icons.forEach(function (icon, index) {
     toggleDescription(index);
   });
 })
-
+/* navBar */
 const button = document.querySelectorAll('.buttons-navbar li a');
 const navbar = document.querySelector('.bg-nav');
 const contactNav = document.querySelector('#navBar--contacts');
@@ -61,6 +61,15 @@ document.addEventListener('scroll', () =>{
     }
 })
 //scroll top
+ 
+/*redireccion de secciones*/
+const ourService = document.querySelector('#Our-Service');
+const Home = document.querySelector('#Home');
+const About = document.querySelector('#About-us');
+function scrollService (container){
+    container.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+}
+
 
 
 
@@ -392,14 +401,6 @@ function ladderSections(contenedores) {
       element.classList.remove("LadderAnimation");
     }, time);
   }
-}
-
-/*redireccion de secciones*/
-const ourService = document.querySelector('#Our-Service');
-const Home = document.querySelector('#Home');
-const About = document.querySelector('#About-us');
-function scrollService (container){
-    container.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
 }
 
 
