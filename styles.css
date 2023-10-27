@@ -244,10 +244,7 @@ header nav {
 /* Seccion Our Services*/
 .Our-Services--container h1 {
   font-size: var(--subtitle-Font-Size);
-}
-
-.Our-Services--title {
-  font-size: 1.5rem;
+  transition: all 0.5s ease;
 }
 
 .Paragraph-Our-Services--container {
@@ -278,6 +275,12 @@ header nav {
   flex-direction: column;
 }
 
+.Our-services--section {
+  transition: all 0.5s ease;
+  margin-top: 20px;
+}
+
+
 .open {
   font-size: 3rem;
   margin-right: 20px;
@@ -288,6 +291,12 @@ header nav {
 
 .closed {
   transform: rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.Our-Services--secondTittle {
+  font-size: 1.5rem;
+  margin-left: 20px;
   transition: all 0.5s ease;
 }
 

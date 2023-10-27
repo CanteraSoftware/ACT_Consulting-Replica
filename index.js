@@ -10,21 +10,24 @@ const footer = document.querySelector("footer")
 const homeHeaderImagen = document.querySelector(".Home-Header--imagen");
 const homeHeaderText = document.querySelector(".Home-Header--text h1")
 const homeHeaderParrafo = document.querySelector(".Home-Header--text p")
-buttonContactNow.addEventListener("click", viewContact)
-contactNav.addEventListener("click", viewContact)
-navBarHome.addEventListener("click", viewHome)
-const ourServiceContainer = document.querySelector(".Our-Services--container")
+const ourServiceContainer = document.querySelector(".Our-Services--container");
+const ourServiceTittle = document.querySelector(".Our-Services--tittle ")
+const ourServiceTittleSecond = document.querySelector(".Our-Services--secondTittle")
 const divServicesContainer = document.querySelectorAll(
   ".Paragraph-Our-Services--container");
+const ourServicesSection = document.querySelector(".Our-services--section")
 const icons = document.querySelectorAll(".open");
 const paragraphDescription = document.querySelectorAll(".Paragraph-Our-Services--description");
 
+
+
+// funcion para desplegar los Our Services
 function toggleDescription(index) {
   divServicesContainer.forEach(function (paragraph, i) {
 
     if (i === index) {
 
-      paragraph.classList.toggle("container-heigth");
+      paragraph.classList.toggle("container-heigth"); // animacion para que suba y baje el parrafo
 
     } else {
       paragraph.classList.remove("container-heigth");
@@ -36,7 +39,7 @@ function toggleDescription(index) {
   icons.forEach(function (icono, i) {
 
     if (i === index) {
-      if (!icono.classList.contains("closed")) {
+      if (!icono.classList.contains("closed")) { //itera por cada icono en caso que se abra cambia el icono
         icono.classList.add("closed");
         icono.textContent = "-"
 
@@ -58,7 +61,7 @@ function toggleDescription(index) {
     ;
 }
 
-icons.forEach(function (icon, index) {
+icons.forEach(function (icon, index) { //l clickear los iconos se abra o cierra el contenedor 
   icon.addEventListener("click", function () {
     toggleDescription(index);
 
@@ -80,6 +83,7 @@ document.addEventListener('scroll', () => {
   }
 })
 //scroll top
+
 //animacion de what we are
 const WhoWeAreContainer = document.querySelector(".Who-We-Are--Container");
 const WhoWeAreDescription = document.querySelector(".Who-We-Are--Description");
@@ -95,6 +99,32 @@ function scrollanimacionWhoWeAre() {
     }, 400);
   }
 }
+//animacion para OurServices
+
+ourServiceContainer
+divServicesContainer
+ourServicesSection
+ourServiceTittle
+ourServiceTittleSecond
+
+function animationOurServices(contenedor) {
+  contenedor.classList.remove("LadderAnimation")
+}
+
+function scrollAnimationOurServices() {
+  if (elementIdentifier(ourServiceTittle)) {
+    animationOurServices(ourServiceTittle);
+    animationOurServices(ourServiceTittleSecond)
+  }
+
+  if (elementIdentifier(ourServicesSection)) {
+    animationOurServices(ourServicesSection)
+  }
+
+}
+window.addEventListener("scroll", scrollAnimationOurServices);
+
+
 
 //animacion de link contac
 
@@ -399,7 +429,9 @@ function ladderSections(contenedores) {
   }
 }
 
-
+buttonContactNow.addEventListener("click", viewContact)
+contactNav.addEventListener("click", viewContact)
+navBarHome.addEventListener("click", viewHome)
 
 function viewContact() {
   whatWeDoSection.classList.add("inactive")
