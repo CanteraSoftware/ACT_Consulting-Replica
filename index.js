@@ -146,6 +146,7 @@ icons.forEach(function (icon, index) {
     toggleDescription(index);
   });
 });
+
 /* navBar */
 
 document.addEventListener("scroll", () => {
@@ -340,13 +341,19 @@ function emailValidator() {
   let firstEmail = email[0];
   let secondEmail = email[1];
 
-  if (/[.*+?¿!#%=|°~^${}()-,´"|[\]\\]/.test(firstEmail)) {
+  if (/[*+?¿!#%=.|°~^${}()-,´"|[\]\\]/.test(firstEmail[0])) {
     inputTextEmail.innerText = "You can't use symbols.";
     inputEmail.style = `
       border-bottom: 2px solid red;
       border-left: 2px solid red;`;
     FormContactContainer.appendChild(inputTextEmail);
-  } else if (/[0-9*+?!#%=|°~^${}()-,´"|[\]\\]/.test(secondEmail)) {
+  }else  if (/[*+?¿!#%=|°~^${}()-,´"|[\]\\]/.test(firstEmail)) {
+    inputTextEmail.innerText = "You can't use symbols.";
+    inputEmail.style = `
+      border-bottom: 2px solid red;
+      border-left: 2px solid red;`;
+    FormContactContainer.appendChild(inputTextEmail);
+} else if (/[0-9*+?!#%=|°~^${}()-,´"|[\]\\]/.test(secondEmail)) {
     inputTextEmail.innerText = "You can't use symbols.";
     inputEmail.style = `
     border-bottom: 2px solid red;
