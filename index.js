@@ -64,6 +64,13 @@ function toggleDescription(index) {
       }
     }
   });
+  paragraphDescription.forEach(function (parrafo, i) {
+    if (i === index) {
+      parrafo.classList.toggle("inactive");
+    } else {
+      parrafo.classList.add("inactive");
+    }
+  });
 }
 
 icons.forEach(function (icon, index) {
@@ -410,7 +417,6 @@ function viewContact() {
   FormContactContainer.classList.remove("inactive");
   InfoContactContainer.classList.remove("inactive");
   homeHeaderImagen.style = `background: url("/public/assets/img/contact-header.jpg");
->>>>>>> e5e9403efd67b256c0aa278c2945fcb4cb11b4a6
     background-size: cover;
     clip-path: none;
     `;
