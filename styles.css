@@ -18,10 +18,9 @@ html {
   font-family: var(--FontFamily);
   color: var(--bg-contact_link);
 }
-
-body {
+/* body {
   transition: all 1.5s ease;
-}
+} */
 
 /* navBar header */
 .buttons-navbar {
@@ -50,9 +49,8 @@ header nav {
   position: fixed;
   top: -80px;
   background: none;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
-
 
 .bg-nav.scrolled {
   background-color: white;
@@ -60,29 +58,28 @@ header nav {
 
 .buttons-navbar a {
   color: white;
-  opacity: .5;
+  opacity: 0.5;
   text-decoration: none;
   margin: 0 10px;
   font-size: 1.4rem;
   background: none;
   border: none;
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .buttons-navbar a:hover {
   opacity: 1;
 }
 
-
 .buttons-navbar a.scrolled {
   color: black;
   opacity: 1;
-  transition: color .2s ease-in;
+  transition: color 0.2s ease-in;
 }
 
 .buttons-navbar a.scrolled:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 /* fin navBar header */
@@ -265,7 +262,6 @@ header nav {
   align-items: center;
   flex-direction: column;
   transition: all 0.3s ease;
-
 }
 
 .Paragraph-Our-Services--other {
@@ -274,8 +270,7 @@ header nav {
   width: 530px;
   margin-top: 10px;
   align-items: center;
-  transition: all ease .3s;
-
+  transition: all ease 0.3s;
 }
 
 .Our-services--section {
@@ -288,7 +283,7 @@ header nav {
 .open {
   font-size: 3rem;
   margin-right: 20px;
-  transition: all ease .3s;
+  transition: all ease 0.3s;
   transform: rotate(1deg);
   cursor: pointer;
 }
@@ -316,7 +311,7 @@ header nav {
   font-size: 1.3rem;
   margin-left: 20px;
   margin-bottom: 10px;
-  transition: all ease .3s;
+  transition: all ease 0.3s;
 }
 
 /* seccion what twe do */
@@ -718,8 +713,6 @@ footer a {
   opacity: 0;
   transform: translate(0px, 70px);
 }
-
-
 
 .opacityAnimation {
   opacity: 0;
