@@ -101,11 +101,7 @@ function scrollanimacionWhoWeAre() {
 }
 //animacion para OurServices
 
-ourServiceContainer
-divServicesContainer
-ourServicesSection
-ourServiceTittle
-ourServiceTittleSecond
+window.addEventListener("scroll", scrollAnimationOurServices);
 
 function animationOurServices(contenedor) {
   contenedor.classList.remove("LadderAnimation")
@@ -428,7 +424,7 @@ function ladderSections(contenedores) {
     }, time);
   }
 }
-
+/* Funciones para cambiar las vistas Home y contact cambiando los estilos del Header*/
 buttonContactNow.addEventListener("click", viewContact)
 contactNav.addEventListener("click", viewContact)
 navBarHome.addEventListener("click", viewHome)

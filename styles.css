@@ -233,6 +233,7 @@ header nav {
   color: #222220;
 }
 
+/* Seccion Our Services*/
 .Our-Services--container {
   display: flex;
   flex-direction: column;
@@ -241,9 +242,14 @@ header nav {
   margin-bottom: 180px;
 }
 
-/* Seccion Our Services*/
 .Our-Services--container h1 {
   font-size: var(--subtitle-Font-Size);
+  transition: all 0.5s ease;
+}
+
+.Our-Services--secondTittle {
+  font-size: 1.5rem;
+  margin-left: 20px;
   transition: all 0.5s ease;
 }
 
@@ -270,16 +276,12 @@ header nav {
 
 }
 
-.Our-Services section {
-  margin-left: 20px;
-  flex-direction: column;
-}
-
 .Our-services--section {
   transition: all 0.5s ease;
   margin-top: 20px;
+  margin-left: 20px;
+  flex-direction: column;
 }
-
 
 .open {
   font-size: 3rem;
@@ -291,12 +293,6 @@ header nav {
 
 .closed {
   transform: rotate(180deg);
-  transition: all 0.5s ease;
-}
-
-.Our-Services--secondTittle {
-  font-size: 1.5rem;
-  margin-left: 20px;
   transition: all 0.5s ease;
 }
 
@@ -733,9 +729,7 @@ footer a {
   transform: translate(0px, 70px);
 }
 
-body {
-  transition: all 1.5s ease;
-}
+
 
 .opacityAnimation {
   opacity: 0;
