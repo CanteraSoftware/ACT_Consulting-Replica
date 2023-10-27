@@ -18,9 +18,9 @@ html {
   font-family: var(--FontFamily);
   color: var(--bg-contact_link);
 }
-body {
+/* body {
   transition: all 1.5s ease;
-}
+} */
 
 /* navBar header */
 .buttons-navbar {
@@ -259,7 +259,6 @@ header nav {
   align-items: center;
   flex-direction: column;
   transition: all 0.5s ease;
-
 }
 
 .Paragraph-Our-Services--other {
@@ -268,8 +267,7 @@ header nav {
   width: 530px;
   margin-top: 10px;
   align-items: center;
-  transition: all ease .5s;
-
+  transition: all ease 0.5s;
 }
 
 .Our-Services section {
@@ -280,7 +278,7 @@ header nav {
 .open {
   font-size: 3rem;
   margin-right: 20px;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
   transform: rotate(1deg);
   cursor: pointer;
 }
@@ -308,7 +306,7 @@ header nav {
   font-size: 1.3rem;
   margin-left: 20px;
   margin-bottom: 10px;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 
 /* seccion what twe do */
@@ -713,10 +711,6 @@ footer a {
 .LadderAnimation {
   opacity: 0;
   transform: translate(0px, 70px);
-}
-
-body {
-  transition: all 1.5s ease;
 }
 
 .opacityAnimation {

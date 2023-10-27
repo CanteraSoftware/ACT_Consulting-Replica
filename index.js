@@ -1,22 +1,49 @@
 //opacity body
 const body = document.querySelector("body");
 
+const contactNav = document.querySelector("#navBar--contacts");
 let releading = 1;
-function opacityLoad() {
-  if (releading >= 1) {
-    body.classList.remove("opacityAnimation");
-    releading--;
+
+function opacityLoadClick() {
+  if (releading == 0) {
+    body.classList.add("opacityAnimation");
+
+    setTimeout(() => {
+      body.style = `
+      transition: all .5s ease;
+      `;
+      body.classList.remove("opacityAnimation");
+    }, 300);
+    setTimeout(() => {
+      body.style = ``;
+    }, 900);
+  } else {
+    setTimeout(() => {
+      body.style = `
+      transition: all .5s ease;
+      `;
+      body.classList.remove("opacityAnimation");
+    }, 400);
+    setTimeout(() => {
+      body.style = ``;
+      releading--;
+    }, 1000);
   }
 }
 
-window.addEventListener("load", opacityLoad);
+contactNav.addEventListener("click", opacityLoadClick);
+window.addEventListener("load", opacityLoadClick);
 
 /* click el button contact now */
 const buttonContactNow = document.querySelector(".button-link");
+buttonContactNow.addEventListener("click", () => {
+  opacityLoadClick();
+  window.scrollTo(top);
+});
+
 /*click en el nav contact */
-const contactNav = document.querySelector("#navBar--contacts");
 const navBarHome = document.querySelector("#navBar--home");
-navBarHome.addEventListener("click", opacityLoad);
+navBarHome.addEventListener("click", opacityLoadClick);
 const aboutUs = document.querySelector(".about-us");
 const personalAttentionContainer = document.querySelector(
   ".Personal-Attention--Container"
